@@ -6,5 +6,6 @@ namespace RMS_Dashboard.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
+        //Implement Repository Pattern
     }
 }
