@@ -13,4 +13,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RMS_Dashboard.Core\RMS_Dashboard.Core.csproj" />
+    <ProjectReference Include="..\RMS_Dashboard.Infra\RMS_Dashboard.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
