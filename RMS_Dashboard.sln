@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS_Dashboard", "RMS_Dashboard\RMS_Dashboard.csproj", "{EA79BB26-C6C6-4082-B415-71DAF7754937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS_Dashboard.Core", "RMS_Dashboard.Core\RMS_Dashboard.Core.csproj", "{DCD245B2-1B9D-4E57-A26C-5B9E3841BB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS_Dashboard.Infrastructure", "RMS_Dashboard.Infra\RMS_Dashboard.Infrastructure.csproj", "{5B55E55B-EF90-414B-AA01-F6130E4A75A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EA79BB26-C6C6-4082-B415-71DAF7754937}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA79BB26-C6C6-4082-B415-71DAF7754937}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA79BB26-C6C6-4082-B415-71DAF7754937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD245B2-1B9D-4E57-A26C-5B9E3841BB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD245B2-1B9D-4E57-A26C-5B9E3841BB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD245B2-1B9D-4E57-A26C-5B9E3841BB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD245B2-1B9D-4E57-A26C-5B9E3841BB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B55E55B-EF90-414B-AA01-F6130E4A75A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B55E55B-EF90-414B-AA01-F6130E4A75A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B55E55B-EF90-414B-AA01-F6130E4A75A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B55E55B-EF90-414B-AA01-F6130E4A75A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

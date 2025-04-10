@@ -1,4 +1,7 @@
 
+using RMS_Dashboard.Core;
+using RMS_Dashboard.Infrastructure;
+
 namespace RMS_Dashboard
 {
     public class Program
@@ -7,7 +10,10 @@ namespace RMS_Dashboard
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            //Add Infrastructure services
+            builder.Services.AddInfrastructure();
+            builder.Services.AddCore();
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

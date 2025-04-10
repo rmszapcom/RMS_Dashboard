@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RMS_Dashboard.Core.Entities;
+using RMS_Dashboard.Core.ServiceContracts;
 
 namespace RMS_Dashboard.Controllers
 {
@@ -6,6 +8,18 @@ namespace RMS_Dashboard.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
-        //Implement Repository Pattern
+        private readonly IEmployeeService _employeeService;
+        public EmployeesController(IEmployeeService employeeService)
+        {
+            _employeeService = employeeService;
+        }
+
+
+        [HttpGet]
+        public async Task<ActionResult<List<Employee>>> GetAllEmployees()
+        {
+            var employees = await _employeeService.GetEmployeeListAsync();
+            return Ok(employees);
+        }
     }
 }
