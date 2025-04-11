@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -46,9 +45,9 @@ namespace RMS_Dashboard.Core.Entities
         [EnumDataType(typeof(ExitStatus))]
         public string ExitStatus { get; set; }
 
-        public string Salary { get; set; } // Handle access control at service/UI level
+        public string Salary { get; set; } 
 
-        // Computed in DB, not mapped
+        
         [NotMapped]
         public string AvailabilityStatus { get; set; }
 

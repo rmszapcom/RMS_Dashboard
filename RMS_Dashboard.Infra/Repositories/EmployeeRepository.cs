@@ -1,23 +1,16 @@
-﻿
+﻿using Dapper;
 using RMS_Dashboard.Core.Entities;
 using RMS_Dashboard.Core.RepositoryContracts;
+using RMS_Dashboard.Infrastructure.DbContext;
 
 namespace RMS_Dashboard.Infrastructure.Repositories;
-public class EmployeeRepository : IEmployeeRepository
+
+public class EmployeeRepository(DapperDbContext dbContext) : IEmployeeRepository
 {
     public async Task<List<Employee>> GetAllEmployees()
     {
-        var employeeList = new List<Employee>
-        {
-            new Employee
-            {
-                EmployeeID = "Zc001",
-                EmployeeName = "Rahul Mekala"
-                // Add other properties if needed
-            }
-        };
-
-        return await Task.FromResult(employeeList);
+        var employeeQuery = "SELECT * FROM employees";
+        var employees = await dbContext.DbConnection.QueryAsync<Employee>(employeeQuery);
+        return employees.ToList();
     }
 }
-
