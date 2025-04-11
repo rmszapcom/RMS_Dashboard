@@ -21,5 +21,11 @@ namespace RMS_Dashboard.Controllers
             var employees = await _employeeService.GetEmployeeListAsync();
             return Ok(employees);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<Employee>>> GetById([FromRoute] string id)
+        {
+            return Ok(await _employeeService.GetEmployeeById(id));
+        }
     }
 }

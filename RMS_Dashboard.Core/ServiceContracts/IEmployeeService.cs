@@ -7,5 +7,6 @@ namespace RMS_Dashboard.Core.ServiceContracts;
     public interface IEmployeeService
     {
     Task<List<Employee>> GetEmployeeListAsync();
+    Task<Employee> GetEmployeeById(string id);
     }
 
