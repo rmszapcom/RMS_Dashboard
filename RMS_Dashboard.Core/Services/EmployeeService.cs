@@ -21,5 +21,9 @@ public class EmployeeService : IEmployeeService
     {
        return await _employeeRepository.GetAllEmployees();
     }
+    public async Task<Employee> GetEmployeeById(string id)
+    {
+        return await _employeeRepository.GetEmployee(id);
+    }
 }
 

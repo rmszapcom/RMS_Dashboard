@@ -5,5 +5,6 @@ namespace RMS_Dashboard.Core.RepositoryContracts;
 public interface IEmployeeRepository
 {
     Task<List<Employee>> GetAllEmployees();
+    Task<Employee> GetEmployee(string employeeId);
 
 }
