@@ -12,15 +12,26 @@ namespace RMS_Dashboard.Core.Entities
 
         [Required]
         public string EmployeeName { get; set; }
-
         public string Designation { get; set; }
+        public string Status { get; set; }
+        public string ClientName { get; set; }
+        public string PrimarySkills { get; set; }
+        public string RelevantExpPrimary { get; set; }
+        public string SecondarySkills { get; set; }
+        public string RelevantExpSecondary { get; set; }
+        public string Remarks { get; set; }
+        public string Skill { get; set; }
+        public string ProjectName { get; set; }
         public string Department { get; set; }
         public string Location { get; set; }
+        public string WorkLocation { get; set; }
         public string ReportingManager { get; set; }
-
+        public string OverAllExperience { get; set; }
+        public string SkillCategory { get; set; }
+        public string Practice { get; set; }
         public DateTime? CareerStartDate { get; set; }
         public DateTime? DateOfJoining { get; set; }
-
+        public DateTime? ExitDate { get; set; }
         public decimal? TotalExpYears { get; set; }
 
         [EnumDataType(typeof(WorkMode))]
@@ -28,9 +39,7 @@ namespace RMS_Dashboard.Core.Entities
 
         [EnumDataType(typeof(BenchStatus))]
         public string BenchStatus { get; set; }
-
         public DateTime? BenchStartDate { get; set; }
-
         public string TrainingPlanAssigned { get; set; }
 
         [EnumDataType(typeof(TrainingCompletionStatus))]
@@ -38,17 +47,14 @@ namespace RMS_Dashboard.Core.Entities
 
         [Range(0, 100)]
         public int? FitmentScore { get; set; }
-
         public DateTime? ExpectedRollOffDate { get; set; }
-
         public string PerformanceRating { get; set; }
 
         [EnumDataType(typeof(ExitStatus))]
         public string ExitStatus { get; set; }
 
-        public string Salary { get; set; } // Handle access control at service/UI level
+        public string Salary { get; set; } 
 
-        // Computed in DB, not mapped
         [NotMapped]
         public string AvailabilityStatus { get; set; }
 
