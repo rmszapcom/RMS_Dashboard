@@ -1,28 +1,39 @@
 
+using Microsoft.EntityFrameworkCore;
 using RMS_Dashboard.Core;
+using RMS_Dashboard.Data;
 using RMS_Dashboard.Infrastructure;
 
 namespace RMS_Dashboard
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            //Add Infrastructure services
             builder.Services.AddInfrastructure();
             builder.Services.AddCore();
 
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<RmsDbContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddLogging();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var logger = services.GetRequiredService<ILogger<ExcelDataImporter>>();
+                var importer = new ExcelDataImporter(services.GetRequiredService<RmsDbContext>(), logger);
+
+                await importer.ImportEmployeesAsync(@"C:\Users\SoumyaBawage\Downloads\Back_Up_Dump_data.xlsx");
+            }
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -32,7 +43,6 @@ namespace RMS_Dashboard
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

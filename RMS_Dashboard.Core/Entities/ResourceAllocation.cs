@@ -2,5 +2,8 @@
 {
     public class ResourceAllocation
     {
+        public int Id { get; set; } // Primary key
+        public string EmployeeName { get; set; }
+        public string ProjectName { get; set; }
     }
 }
