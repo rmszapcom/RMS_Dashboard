@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace RMS_Dashboard.Data
 {
@@ -134,7 +135,15 @@ namespace RMS_Dashboard.Data
 
                     };
 
-                    _context.Employees.Add(employee);
+                    var exists = await _context.Employees.AnyAsync(e => e.EmployeeID == employee.EmployeeID);
+                    if (!exists)
+                    {
+                        _context.Employees.Add(employee);
+                    }
+                    else
+                    {
+                        _logger.LogWarning($"Skipped duplicate EmployeeID '{employeeId}' at row {row}.");
+                    }
                 }
 
                 await _context.SaveChangesAsync();
