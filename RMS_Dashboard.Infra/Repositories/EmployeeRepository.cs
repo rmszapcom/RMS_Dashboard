@@ -1,28 +1,27 @@
-﻿
+﻿using Microsoft.EntityFrameworkCore;
 using RMS_Dashboard.Core.Entities;
 using RMS_Dashboard.Core.RepositoryContracts;
+using RMS_Dashboard.Data;
 
 namespace RMS_Dashboard.Infrastructure.Repositories;
 public class EmployeeRepository : IEmployeeRepository
 {
-    private readonly List<Employee> _employeeList = new List<Employee>
+    private readonly RmsDbContext _context;
+
+    public EmployeeRepository(RmsDbContext context)
     {
-        new Employee
-        {
-            EmployeeID = "Zc001",
-            EmployeeName = "Rahul Mekala"
-            // Add other properties if needed
-        }
-    };
+        _context = context;
+    }
+
     public async Task<List<Employee>> GetAllEmployees()
     {
-        return await Task.FromResult(_employeeList);
+        return await _context.Employees.ToListAsync();
     }
 
     public async Task<Employee> GetEmployee(string employeeId)
     {
-        var employee = _employeeList.FirstOrDefault(e => e.EmployeeID == employeeId);
-        return await Task.FromResult(employee);
+        return await _context.Employees
+            .FirstOrDefaultAsync(e => e.EmployeeID == employeeId);
     }
 }
 
