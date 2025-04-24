@@ -1,44 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Box } from "@mui/material";
 import GroupsIcon from "@mui/icons-material/Groups";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import BoyIcon from "@mui/icons-material/Boy";
 import AirlineSeatReclineNormalOutlinedIcon from "@mui/icons-material/AirlineSeatReclineNormalOutlined";
 import EscalatorWarningOutlinedIcon from "@mui/icons-material/EscalatorWarningOutlined";
+import { calculateEmployeeStats } from "../utils/employeeUtils";
 import StatCard from "./StatCard";
 
-const StatCardsRow = () => {
+const StatCardsRow = ({ employeeData }) => {
+  const [stats, setStats] = useState({
+    total: "0",
+    billable: "0",
+    benched: "0",
+    shadow: "0",
+    interns: "0",
+  });
+
+  useEffect(() => {
+    if (employeeData && employeeData.length > 0) {
+      const stats = calculateEmployeeStats(employeeData);
+      setStats(stats);
+    }
+  }, [employeeData]);
+
   const cards = [
     {
       title: "Total Employees",
-      value: "248",
-      icon: <GroupsIcon color="primary" sx={{ fontSize: 24 }} />,
+      value: stats.total,
+      icon: <GroupsIcon sx={{ fontSize: 24, color: "#3399ff" }} />,
     },
     {
       title: "Billable",
-      value: "120",
-      icon: <MonetizationOnIcon color="success" sx={{ fontSize: 25 }} />,
-    },
-    {
-      title: "Shadow",
-      value: "20",
-      icon: <BoyIcon color="secondary" sx={{ fontSize: 25 }} />,
+      value: stats.billable,
+      icon: <MonetizationOnIcon sx={{ fontSize: 25, color: "#33cc33" }} />,
     },
     {
       title: "Benched",
-      value: "108",
+      value: stats.benched,
       icon: (
         <AirlineSeatReclineNormalOutlinedIcon
-          color="warning"
-          sx={{ fontSize: 25 }}
+          sx={{ fontSize: 25, color: "#ff0000" }}
         />
       ),
     },
     {
+      title: "Shadow",
+      value: stats.shadow,
+      icon: <BoyIcon sx={{ fontSize: 27, color: "#ffff00" }} />,
+    },
+    {
       title: "Interns",
-      value: "8",
+      value: stats.interns,
       icon: (
-        <EscalatorWarningOutlinedIcon color="warning" sx={{ fontSize: 25 }} />
+        <EscalatorWarningOutlinedIcon sx={{ fontSize: 25, color: "#ffcc00" }} />
       ),
     },
   ];

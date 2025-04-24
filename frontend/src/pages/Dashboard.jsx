@@ -2,7 +2,8 @@ import React from "react";
 import "./Dashboard.css";
 import { Box, Typography } from "@mui/material";
 import StatCardsRow from "../components/StatCardsRow";
-import ChartSection from "../components/ChartSection";
+//import ChartSection from "../components/ChartSection";
+import employeeData from "../data/EmployeeData.json";
 
 const Dashboard = () => {
   return (
@@ -17,12 +18,11 @@ const Dashboard = () => {
 
       {/* Full width row */}
       <Box sx={{ width: "100%" }}>
-        <StatCardsRow />
+        <StatCardsRow employeeData={employeeData} />
       </Box>
 
-      {/* Chart section here
-      <Box sx={{ width: "100%" }}>
-        <ChartSection />
+      {/* <Box sx={{ width: "100%" }}>
+        <ChartSection employeeData={employeeData} />
       </Box> */}
     </Box>
   );

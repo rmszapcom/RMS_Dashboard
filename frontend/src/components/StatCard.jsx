@@ -5,7 +5,7 @@ import { Paper, Typography, Box } from "@mui/material";
 const StatCard = ({ title, value, icon }) => {
   return (
     <Paper
-      elevation={3}
+      elevation={1}
       sx={{
         p: 2,
         height: "100%",
@@ -15,11 +15,11 @@ const StatCard = ({ title, value, icon }) => {
         justifyContent: "space-between",
         minWidth: 200,
         borderRadius: 3,
-        backgroundColor: "#000080",
-        color: "white",
+        backgroundColor: "#ffffff",
+        color: "#000080",
         transition: "transform 0.3s ease-in-out",
         "&:hover": {
-          transform: "scale(1.05)",
+          transform: "scale(1)",
           boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
         },
       }}
@@ -42,7 +42,7 @@ const StatCard = ({ title, value, icon }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            borderRadius: "50%", // Circular shape
+            borderRadius: "50%",
             // backgroundColor: "white",
             boxShadow: `0px 4px 12px ${icon.props.color}`,
             padding: 1,
