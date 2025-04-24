@@ -135,15 +135,16 @@ namespace RMS_Dashboard.Data
 
                     };
 
-                    var exists = await _context.Employees.AnyAsync(e => e.EmployeeID == employee.EmployeeID);
-                    if (!exists)
+                    var existing = await _context.Employees.FindAsync(employee.EmployeeID);
+                    if (existing != null)
                     {
-                        _context.Employees.Add(employee);
+                        _context.Entry(existing).CurrentValues.SetValues(employee);
                     }
                     else
                     {
-                        _logger.LogWarning($"Skipped duplicate EmployeeID '{employeeId}' at row {row}.");
+                        await _context.Employees.AddAsync(employee); // ← This was missing!
                     }
+
                 }
 
                 await _context.SaveChangesAsync();

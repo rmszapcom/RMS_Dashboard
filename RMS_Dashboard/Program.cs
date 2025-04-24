@@ -21,6 +21,7 @@ namespace RMS_Dashboard
             builder.Services.AddDbContext<RmsDbContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddLogging();
+            builder.Services.AddScoped<ExcelDataImporter>();
 
             var app = builder.Build();
 
