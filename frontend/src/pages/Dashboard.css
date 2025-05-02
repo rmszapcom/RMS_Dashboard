@@ -2,3 +2,8 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+.css-zjhuaj-MuiGrid-root {
+    align-items: center;
+    justify-content: space-around !important;
+}
