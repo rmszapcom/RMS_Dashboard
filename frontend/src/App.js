@@ -7,6 +7,12 @@ const theme = createTheme({
   typography: {
     fontFamily: "Poppins, sans-serif",
   },
+  palette: {
+    primary: {
+      main: "#000080",
+      secondary: " #000099",
+    },
+  },
 });
 
 function App() {
