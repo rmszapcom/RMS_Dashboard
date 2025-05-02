@@ -2,7 +2,7 @@ import React from "react";
 import "./Dashboard.css";
 import { Box, Typography } from "@mui/material";
 import StatCardsRow from "../components/StatCardsRow";
-//import ChartSection from "../components/ChartSection";
+import ChartSection from "../components/ChartSection";
 import employeeData from "../data/EmployeeData.json";
 
 const Dashboard = () => {
@@ -21,9 +21,9 @@ const Dashboard = () => {
         <StatCardsRow employeeData={employeeData} />
       </Box>
 
-      {/* <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%" }}>
         <ChartSection employeeData={employeeData} />
-      </Box> */}
+      </Box>
     </Box>
   );
 };
