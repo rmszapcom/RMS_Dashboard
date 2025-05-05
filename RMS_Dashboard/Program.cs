@@ -32,7 +32,8 @@ namespace RMS_Dashboard
                 var logger = services.GetRequiredService<ILogger<ExcelDataImporter>>();
                 var importer = new ExcelDataImporter(services.GetRequiredService<RmsDbContext>(), logger);
 
-                await importer.ImportEmployeesAsync(@"C:\Users\SoumyaBawage\Downloads\Back_Up_Dump_data.xlsx");
+                var dataFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "Back_Up_Dump_data.xlsx");
+                await importer.ImportEmployeesAsync(dataFilePath);
             }
 
             if (app.Environment.IsDevelopment())
