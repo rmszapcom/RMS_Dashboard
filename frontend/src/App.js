@@ -7,6 +7,12 @@ const theme = createTheme({
   typography: {
     fontFamily: "Poppins, sans-serif",
   },
+  palette: {
+    primary: {
+      main: "#000080",
+      secondary: " #000099",
+    },
+  },
 });
 
 function App() {
@@ -18,7 +24,7 @@ function App() {
           body: {
             maxWidth: "100vw",
             overflowX: "hidden",
-            backgroundColor: "#ccccff",
+            backgroundColor: "#ffff",
             margin: 0,
             padding: 0,
           },
@@ -26,6 +32,7 @@ function App() {
         }}
       />
       <Dashboard />
+      {/* <DashboardOverview /> */}
     </ThemeProvider>
   );
 }

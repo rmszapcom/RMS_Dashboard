@@ -1,0 +1,1828 @@
+[
+  {
+    "EmployeeID": "EMP1000",
+    "EmployeeName": "Ethan Kemp",
+    "Designation": "Chief Technology Officer",
+    "Status": "Inactive",
+    "ClientName": "Christensen, Roberson and Thomas",
+    "PrimarySkills": "Health visitor",
+    "RelevantExpPrimary": "3 years",
+    "SecondarySkills": "Ergonomist",
+    "RelevantExpSecondary": "1 years",
+    "Remarks": "Decision many allow debate so short scientist.",
+    "Skill": "Lighting technician, broadcasting/film/video",
+    "ProjectName": "Orchestrate Open-Source Convergence",
+    "Department": "debate",
+    "Location": "Jamesfort",
+    "WorkLocation": "Christopherchester",
+    "ReportingManager": "Susan Miller",
+    "OverAllExperience": "8 years",
+    "SkillCategory": "Frontend",
+    "Practice": "respond",
+    "CareerStartDate": "2016-04-09",
+    "DateOfJoining": "2021-01-01",
+    "ExitDate": null,
+    "TotalExpYears": 12.4,
+    "WorkMode": "Hybrid",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "nor",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 46,
+    "ExpectedRollOffDate": "2024-05-31",
+    "PerformanceRating": "4.8",
+    "ExitStatus": "Pending",
+    "Salary": "146080",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Look ago group course pick style.",
+        "ExitDate": "2024-11-22"
+      },
+      {
+        "ExitReason": "Baby perhaps study put least late.",
+        "ExitDate": "2024-06-30"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "4 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "5 years"
+      },
+      {
+        "SkillName": "Python",
+        "Experience": "1 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Mendoza PLC",
+        "Client": "Group",
+        "StartDate": "2024-05-19",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Nelson-Flores",
+        "Client": "Inc",
+        "StartDate": "2024-06-05",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1001",
+    "EmployeeName": "Stephen Holland",
+    "Designation": "Lighting technician, broadcasting/film/video",
+    "Status": "Inactive",
+    "ClientName": "Simmons Ltd",
+    "PrimarySkills": "Further education lecturer",
+    "RelevantExpPrimary": "5 years",
+    "SecondarySkills": "Bonds trader",
+    "RelevantExpSecondary": "4 years",
+    "Remarks": "Car million perform list political woman arrive.",
+    "Skill": "Chartered loss adjuster",
+    "ProjectName": "Re-Intermediate Front-End E-Tailers",
+    "Department": "space",
+    "Location": "Martinchester",
+    "WorkLocation": "West Ryanborough",
+    "ReportingManager": "Mrs. Sarah Walker PhD",
+    "OverAllExperience": "6 years",
+    "SkillCategory": "Backend",
+    "Practice": "a",
+    "CareerStartDate": "2016-09-22",
+    "DateOfJoining": "2020-11-08",
+    "ExitDate": null,
+    "TotalExpYears": 9.6,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2020-08-02",
+    "TrainingPlanAssigned": "source",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 89,
+    "ExpectedRollOffDate": "2024-01-07",
+    "PerformanceRating": "1.4",
+    "ExitStatus": "Pending",
+    "Salary": "71982",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Bill allow school floor.",
+        "ExitDate": "2024-10-24"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "Node.js",
+        "Experience": "5 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Howell-Butler",
+        "Client": "LLC",
+        "StartDate": "2024-06-10",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1002",
+    "EmployeeName": "Randall Hudson",
+    "Designation": "Insurance risk surveyor",
+    "Status": "Active",
+    "ClientName": "Ellis, Arroyo and Smith",
+    "PrimarySkills": "Psychotherapist, dance movement",
+    "RelevantExpPrimary": "3 years",
+    "SecondarySkills": "Community pharmacist",
+    "RelevantExpSecondary": "4 years",
+    "Remarks": "Kitchen approach yourself card green teach look sea.",
+    "Skill": "Designer, ceramics/pottery",
+    "ProjectName": "Facilitate E-Business E-Business",
+    "Department": "forget",
+    "Location": "North Davidland",
+    "WorkLocation": "North Michelle",
+    "ReportingManager": "Sharon Miller",
+    "OverAllExperience": "5 years",
+    "SkillCategory": "Frontend",
+    "Practice": "detail",
+    "CareerStartDate": "2018-01-09",
+    "DateOfJoining": "2021-10-15",
+    "ExitDate": null,
+    "TotalExpYears": 6.2,
+    "WorkMode": "Hybrid",
+    "BenchStatus": "Shadow",
+    "BenchStartDate": "2023-01-14",
+    "TrainingPlanAssigned": "kitchen",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 53,
+    "ExpectedRollOffDate": "2024-12-17",
+    "PerformanceRating": "2.9",
+    "ExitStatus": "Pending",
+    "Salary": "34904",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Produce scientist fine get along during.",
+        "ExitDate": "2024-11-09"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "2 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "4 years"
+      },
+      {
+        "SkillName": "Node.js",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Armstrong and Sons",
+        "Client": "and Sons",
+        "StartDate": "2024-10-06",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1003",
+    "EmployeeName": "Patrick Shelton",
+    "Designation": "Associate",
+    "Status": "Active",
+    "ClientName": "Montgomery Inc",
+    "PrimarySkills": "Animal nutritionist",
+    "RelevantExpPrimary": "3 years",
+    "SecondarySkills": "Electronics engineer",
+    "RelevantExpSecondary": "1 years",
+    "Remarks": "Along know pay.",
+    "Skill": "Drilling engineer",
+    "ProjectName": "Streamline Clicks-And-Mortar Metrics",
+    "Department": "pretty",
+    "Location": "East Lisa",
+    "WorkLocation": "Johnsonmouth",
+    "ReportingManager": "David Woods",
+    "OverAllExperience": "6 years",
+    "SkillCategory": "Full Stack",
+    "Practice": "face",
+    "CareerStartDate": "2016-11-17",
+    "DateOfJoining": "2022-01-16",
+    "ExitDate": "2023-05-07",
+    "TotalExpYears": 4.9,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Benched",
+    "BenchStartDate": "2017-06-04",
+    "TrainingPlanAssigned": "kind",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 58,
+    "ExpectedRollOffDate": "2024-08-21",
+    "PerformanceRating": "2.7",
+    "ExitStatus": "Active",
+    "Salary": "91858",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "She wonder bring hand military.",
+        "ExitDate": "2024-06-14"
+      },
+      {
+        "ExitReason": "By ground feel never build Republican.",
+        "ExitDate": "2024-11-15"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "Python",
+        "Experience": "1 years"
+      },
+      {
+        "SkillName": "Node.js",
+        "Experience": "4 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Internal",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Keller Inc",
+        "Client": "Ltd",
+        "StartDate": "2025-02-08",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1004",
+    "EmployeeName": "Denise Bass",
+    "Designation": "Commercial/residential surveyor",
+    "Status": "Inactive",
+    "ClientName": "Ruiz, House and Rodriguez",
+    "PrimarySkills": "Curator",
+    "RelevantExpPrimary": "4 years",
+    "SecondarySkills": "Investment banker, corporate",
+    "RelevantExpSecondary": "3 years",
+    "Remarks": "Each let interview when recent audience.",
+    "Skill": "Civil Service fast streamer",
+    "ProjectName": "Orchestrate Customized Content",
+    "Department": "project",
+    "Location": "South Carrie",
+    "WorkLocation": "North Benjaminberg",
+    "ReportingManager": "Brittany Day",
+    "OverAllExperience": "14 years",
+    "SkillCategory": "DevOps",
+    "Practice": "bag",
+    "CareerStartDate": "2017-11-21",
+    "DateOfJoining": "2021-01-18",
+    "ExitDate": "2021-04-14",
+    "TotalExpYears": 13.1,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Shadow",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "space",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 25,
+    "ExpectedRollOffDate": "2024-06-22",
+    "PerformanceRating": "1.2",
+    "ExitStatus": "Exited",
+    "Salary": "136931",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Bank later song alone concern against bad.",
+        "ExitDate": "2024-05-15"
+      },
+      {
+        "ExitReason": "Realize mother PM affect fall kitchen.",
+        "ExitDate": "2024-11-25"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "React",
+        "Experience": "3 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "White, Brown and Phillips",
+        "Client": "Inc",
+        "StartDate": "2024-08-10",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1005",
+    "EmployeeName": "Donna Rivera",
+    "Designation": "Editor, film/video",
+    "Status": "Inactive",
+    "ClientName": "Mckee-Small",
+    "PrimarySkills": "Set designer",
+    "RelevantExpPrimary": "5 years",
+    "SecondarySkills": "Estate agent",
+    "RelevantExpSecondary": "2 years",
+    "Remarks": "Car might page between.",
+    "Skill": "Teacher, secondary school",
+    "ProjectName": "Redefine Back-End Relationships",
+    "Department": "word",
+    "Location": "East Davidport",
+    "WorkLocation": "Ruizshire",
+    "ReportingManager": "Amy Marshall",
+    "OverAllExperience": "5 years",
+    "SkillCategory": "Full Stack",
+    "Practice": "along",
+    "CareerStartDate": "2016-02-11",
+    "DateOfJoining": "2021-04-22",
+    "ExitDate": null,
+    "TotalExpYears": 4.7,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2020-01-29",
+    "TrainingPlanAssigned": "employee",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 28,
+    "ExpectedRollOffDate": "2025-10-24",
+    "PerformanceRating": "2.4",
+    "ExitStatus": "Active",
+    "Salary": "42483",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Cover data manage relate.",
+        "ExitDate": "2024-07-16"
+      },
+      {
+        "ExitReason": "Surface left thought peace.",
+        "ExitDate": "2024-07-07"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "5 years"
+      },
+      {
+        "SkillName": "SQL",
+        "Experience": "5 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "West-Johnson",
+        "Client": "Group",
+        "StartDate": "2024-06-26",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1006",
+    "EmployeeName": "Carla Zavala",
+    "Designation": "Research scientist (life sciences)",
+    "Status": "Inactive",
+    "ClientName": "Smith-Mckee",
+    "PrimarySkills": "Engineer, manufacturing",
+    "RelevantExpPrimary": "5 years",
+    "SecondarySkills": "Administrator, sports",
+    "RelevantExpSecondary": "4 years",
+    "Remarks": "Determine add increase.",
+    "Skill": "Optometrist",
+    "ProjectName": "Harness Extensible Architectures",
+    "Department": "chance",
+    "Location": "Williamview",
+    "WorkLocation": "Hallview",
+    "ReportingManager": "Amanda Martin",
+    "OverAllExperience": "10 years",
+    "SkillCategory": "Scrum Master",
+    "Practice": "on",
+    "CareerStartDate": "2018-05-07",
+    "DateOfJoining": "2021-09-11",
+    "ExitDate": "2022-09-05",
+    "TotalExpYears": 3.4,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "dark",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 69,
+    "ExpectedRollOffDate": "2024-07-21",
+    "PerformanceRating": "3.4",
+    "ExitStatus": "Active",
+    "Salary": "133895",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Store trial experience.",
+        "ExitDate": "2024-10-19"
+      },
+      {
+        "ExitReason": "Industry allow without meeting ten character.",
+        "ExitDate": "2024-08-09"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "React",
+        "Experience": "1 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Butler, Blackwell and Bailey",
+        "Client": "Inc",
+        "StartDate": "2024-10-04",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Wilson Inc",
+        "Client": "and Sons",
+        "StartDate": "2024-08-25",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1007",
+    "EmployeeName": "Gilbert Richards",
+    "Designation": "Engineer, manufacturing systems",
+    "Status": "Active",
+    "ClientName": "Williams, Taylor and Morgan",
+    "PrimarySkills": "Lobbyist",
+    "RelevantExpPrimary": "2 years",
+    "SecondarySkills": "Production assistant, television",
+    "RelevantExpSecondary": "5 years",
+    "Remarks": "Story here place send election.",
+    "Skill": "Ergonomist",
+    "ProjectName": "Leverage Out-Of-The-Box Markets",
+    "Department": "bag",
+    "Location": "Vasquezland",
+    "WorkLocation": "North Amber",
+    "ReportingManager": "John Martin",
+    "OverAllExperience": "12 years",
+    "SkillCategory": "Backend",
+    "Practice": "human",
+    "CareerStartDate": "2016-10-23",
+    "DateOfJoining": "2023-07-08",
+    "ExitDate": "2025-04-16",
+    "TotalExpYears": 12.3,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Benched",
+    "BenchStartDate": "2025-04-08",
+    "TrainingPlanAssigned": "up",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 75,
+    "ExpectedRollOffDate": "2024-06-14",
+    "PerformanceRating": "3.7",
+    "ExitStatus": "Exited",
+    "Salary": "58058",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Fight seem society level subject.",
+        "ExitDate": "2025-04-21"
+      },
+      {
+        "ExitReason": "Respond team upon rate.",
+        "ExitDate": "2025-01-07"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      },
+      {
+        "SkillName": "Node.js",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [],
+    "Allocations": [
+      {
+        "Project": "Watson-Stone",
+        "Client": "Inc",
+        "StartDate": "2024-06-18",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Boyd Inc",
+        "Client": "and Sons",
+        "StartDate": "2024-06-09",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1008",
+    "EmployeeName": "Samuel Perez",
+    "Designation": "Textile designer",
+    "Status": "Inactive",
+    "ClientName": "Chapman, Hurley and Shaw",
+    "PrimarySkills": "Music therapist",
+    "RelevantExpPrimary": "5 years",
+    "SecondarySkills": "Ranger/warden",
+    "RelevantExpSecondary": "1 years",
+    "Remarks": "Within both follow beautiful key south act.",
+    "Skill": "Occupational therapist",
+    "ProjectName": "Empower Next-Generation E-Tailers",
+    "Department": "thing",
+    "Location": "Harrisberg",
+    "WorkLocation": "Rhondamouth",
+    "ReportingManager": "Lisa Harvey",
+    "OverAllExperience": "2 years",
+    "SkillCategory": "Product Manager",
+    "Practice": "year",
+    "CareerStartDate": "2017-05-22",
+    "DateOfJoining": "2024-02-12",
+    "ExitDate": null,
+    "TotalExpYears": 12.9,
+    "WorkMode": "Remote",
+    "BenchStatus": "Shadow",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "traditional",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 90,
+    "ExpectedRollOffDate": "2025-07-25",
+    "PerformanceRating": "2.9",
+    "ExitStatus": "Exited",
+    "Salary": "45165",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Edge me less security style.",
+        "ExitDate": "2025-03-03"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "React",
+        "Experience": "1 years"
+      },
+      {
+        "SkillName": "Python",
+        "Experience": "4 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Williams-Miller",
+        "Client": "LLC",
+        "StartDate": "2024-12-28",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1009",
+    "EmployeeName": "Matthew Webb",
+    "Designation": "Catering manager",
+    "Status": "Active",
+    "ClientName": "Lawrence-Guzman",
+    "PrimarySkills": "Health and safety adviser",
+    "RelevantExpPrimary": "4 years",
+    "SecondarySkills": "Herbalist",
+    "RelevantExpSecondary": "2 years",
+    "Remarks": "Skill building factor approach to college appear.",
+    "Skill": "Heritage manager",
+    "ProjectName": "Whiteboard Plug-And-Play Vortals",
+    "Department": "remember",
+    "Location": "East Jacobbury",
+    "WorkLocation": "Adamburgh",
+    "ReportingManager": "Brittany Smith",
+    "OverAllExperience": "14 years",
+    "SkillCategory": "Technical Lead",
+    "Practice": "shake",
+    "CareerStartDate": "2014-09-01",
+    "DateOfJoining": "2022-11-27",
+    "ExitDate": "2025-04-01",
+    "TotalExpYears": 8.2,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2025-04-18",
+    "TrainingPlanAssigned": "middle",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 40,
+    "ExpectedRollOffDate": "2025-01-28",
+    "PerformanceRating": "3.4",
+    "ExitStatus": "Active",
+    "Salary": "80206",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Should me what answer find reduce better family.",
+        "ExitDate": "2024-10-03"
+      },
+      {
+        "ExitReason": "Group decide gas concern.",
+        "ExitDate": "2024-08-26"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "Python",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Robinson-Mcclure",
+        "Client": "PLC",
+        "StartDate": "2024-06-25",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1010",
+    "EmployeeName": "Joshua Jones",
+    "Designation": "Radiographer, therapeutic",
+    "Status": "Active",
+    "ClientName": "Day, Lee and Lopez",
+    "PrimarySkills": "Research scientist (physical sciences)",
+    "RelevantExpPrimary": "4 years",
+    "SecondarySkills": "Animal technologist",
+    "RelevantExpSecondary": "3 years",
+    "Remarks": "Certain off work indeed mention anyone meet.",
+    "Skill": "Gaffer",
+    "ProjectName": "Synthesize Intuitive Metrics",
+    "Department": "thing",
+    "Location": "West Nicole",
+    "WorkLocation": "Port Martha",
+    "ReportingManager": "Ivan Ellis",
+    "OverAllExperience": "1 years",
+    "SkillCategory": "Engineering Manager",
+    "Practice": "east",
+    "CareerStartDate": "2014-04-18",
+    "DateOfJoining": "2023-01-14",
+    "ExitDate": null,
+    "TotalExpYears": 9.2,
+    "WorkMode": "Remote",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "along",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 54,
+    "ExpectedRollOffDate": "2025-01-11",
+    "PerformanceRating": "4.3",
+    "ExitStatus": "Pending",
+    "Salary": "100894",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Us image open draw coach.",
+        "ExitDate": "2024-05-11"
+      },
+      {
+        "ExitReason": "Like across firm issue hotel.",
+        "ExitDate": "2024-11-13"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "2 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "5 years"
+      },
+      {
+        "SkillName": "React",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Aguilar-Murphy",
+        "Client": "Group",
+        "StartDate": "2024-07-25",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1011",
+    "EmployeeName": "Mark Bowen",
+    "Designation": "Oceanographer",
+    "Status": "Active",
+    "ClientName": "Nelson-Willis",
+    "PrimarySkills": "Trade union research officer",
+    "RelevantExpPrimary": "8 years",
+    "SecondarySkills": "Publishing copy",
+    "RelevantExpSecondary": "3 years",
+    "Remarks": "Husband find back citizen.",
+    "Skill": "Contractor",
+    "ProjectName": "Maximize Magnetic Users",
+    "Department": "plant",
+    "Location": "North Lisa",
+    "WorkLocation": "Port Jacquelinetown",
+    "ReportingManager": "Derrick Smith",
+    "OverAllExperience": "8 years",
+    "SkillCategory": "DevOps",
+    "Practice": "head",
+    "CareerStartDate": "2017-07-31",
+    "DateOfJoining": "2023-06-17",
+    "ExitDate": null,
+    "TotalExpYears": 13.9,
+    "WorkMode": "Remote",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2015-11-15",
+    "TrainingPlanAssigned": "according",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 20,
+    "ExpectedRollOffDate": "2024-07-21",
+    "PerformanceRating": "2.0",
+    "ExitStatus": "Pending",
+    "Salary": "119781",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Treat including fire.",
+        "ExitDate": "2024-05-14"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "2 years"
+      },
+      {
+        "SkillName": "React",
+        "Experience": "5 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Dyer PLC",
+        "Client": "Ltd",
+        "StartDate": "2024-09-28",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Washington, Wolf and Gallegos",
+        "Client": "PLC",
+        "StartDate": "2024-08-08",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1012",
+    "EmployeeName": "Kayla Robertson",
+    "Designation": "Therapist, drama",
+    "Status": "Inactive",
+    "ClientName": "Webster, Miller and Scott",
+    "PrimarySkills": "Accounting technician",
+    "RelevantExpPrimary": "2 years",
+    "SecondarySkills": "Engineer, water",
+    "RelevantExpSecondary": "1 years",
+    "Remarks": "Themselves safe care ready carry.",
+    "Skill": "Petroleum engineer",
+    "ProjectName": "Unleash Ubiquitous Schemas",
+    "Department": "story",
+    "Location": "Port James",
+    "WorkLocation": "Lake Debraport",
+    "ReportingManager": "Sandra Li",
+    "OverAllExperience": "14 years",
+    "SkillCategory": "Scrum Master",
+    "Practice": "case",
+    "CareerStartDate": "2014-11-20",
+    "DateOfJoining": "2020-08-07",
+    "ExitDate": "2021-09-14",
+    "TotalExpYears": 14.1,
+    "WorkMode": "Hybrid",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2015-07-29",
+    "TrainingPlanAssigned": "tend",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 5,
+    "ExpectedRollOffDate": "2025-04-24",
+    "PerformanceRating": "2.4",
+    "ExitStatus": "Active",
+    "Salary": "53030",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Minute home she control another carry.",
+        "ExitDate": "2024-07-19"
+      },
+      {
+        "ExitReason": "Middle on interest institution.",
+        "ExitDate": "2024-07-05"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "1 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Noble-Johnson",
+        "Client": "PLC",
+        "StartDate": "2024-05-31",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1013",
+    "EmployeeName": "Amy Clark",
+    "Designation": "Editor, film/video",
+    "Status": "Active",
+    "ClientName": "Torres-Oliver",
+    "PrimarySkills": "Hospital pharmacist",
+    "RelevantExpPrimary": "6 years",
+    "SecondarySkills": "Public affairs consultant",
+    "RelevantExpSecondary": "5 years",
+    "Remarks": "Personal physical early book clear protect arm.",
+    "Skill": "Engineer, technical sales",
+    "ProjectName": "Visualize Ubiquitous Paradigms",
+    "Department": "sister",
+    "Location": "Hunterland",
+    "WorkLocation": "West Cherylberg",
+    "ReportingManager": "Brian Young",
+    "OverAllExperience": "5 years",
+    "SkillCategory": "Frontend",
+    "Practice": "show",
+    "CareerStartDate": "2017-01-27",
+    "DateOfJoining": "2021-03-09",
+    "ExitDate": null,
+    "TotalExpYears": 10.7,
+    "WorkMode": "Remote",
+    "BenchStatus": "Benched",
+    "BenchStartDate": "2021-11-05",
+    "TrainingPlanAssigned": "up",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 26,
+    "ExpectedRollOffDate": "2024-07-22",
+    "PerformanceRating": "2.2",
+    "ExitStatus": "Pending",
+    "Salary": "48970",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Modern change me success defense.",
+        "ExitDate": "2024-06-28"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "2 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "4 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "training",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "West, Miller and Robertson",
+        "Client": "Inc",
+        "StartDate": "2024-05-25",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1014",
+    "EmployeeName": "Patricia Campbell",
+    "Designation": "Engineer, drilling",
+    "Status": "Active",
+    "ClientName": "Owens-Benson",
+    "PrimarySkills": "Accountant, chartered management",
+    "RelevantExpPrimary": "2 years",
+    "SecondarySkills": "Scientist, physiological",
+    "RelevantExpSecondary": "4 years",
+    "Remarks": "There else policy music rock himself interview.",
+    "Skill": "Minerals surveyor",
+    "ProjectName": "Optimize One-To-One E-Services",
+    "Department": "create",
+    "Location": "North Sandyberg",
+    "WorkLocation": "Brownberg",
+    "ReportingManager": "David Michael",
+    "OverAllExperience": "11 years",
+    "SkillCategory": "Technical Lead",
+    "Practice": "dinner",
+    "CareerStartDate": "2020-02-21",
+    "DateOfJoining": "2024-01-06",
+    "ExitDate": "2025-02-01",
+    "TotalExpYears": 9.4,
+    "WorkMode": "Remote",
+    "BenchStatus": "Benched",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "return",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 30,
+    "ExpectedRollOffDate": "2024-12-10",
+    "PerformanceRating": "2.1",
+    "ExitStatus": "Active",
+    "Salary": "61242",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Offer know talk Mr.",
+        "ExitDate": "2025-03-07"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "React",
+        "Experience": "5 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      },
+      {
+        "SkillName": "React",
+        "Experience": "5 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Short-Lawson",
+        "Client": "Internal",
+        "StartDate": "2024-05-20",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Mccormick-Martin",
+        "Client": "Ltd",
+        "StartDate": "2024-09-23",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1015",
+    "EmployeeName": "Autumn Harris",
+    "Designation": "Administrator, Civil Service",
+    "Status": "Inactive",
+    "ClientName": "Carroll, Quinn and Prince",
+    "PrimarySkills": "Teacher, early years/pre",
+    "RelevantExpPrimary": "4 years",
+    "SecondarySkills": "Teaching laboratory technician",
+    "RelevantExpSecondary": "4 years",
+    "Remarks": "Person forget yeah here culture.",
+    "Skill": "Exercise physiologist",
+    "ProjectName": "Embrace User-Centric Solutions",
+    "Department": "compare",
+    "Location": "Gloriaport",
+    "WorkLocation": "Youngborough",
+    "ReportingManager": "Summer Adams",
+    "OverAllExperience": "13 years",
+    "SkillCategory": "Engineering Manager",
+    "Practice": "up",
+    "CareerStartDate": "2016-04-10",
+    "DateOfJoining": "2023-10-07",
+    "ExitDate": "2024-02-27",
+    "TotalExpYears": 10.3,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "put",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 6,
+    "ExpectedRollOffDate": "2024-10-07",
+    "PerformanceRating": "3.8",
+    "ExitStatus": "Active",
+    "Salary": "130287",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Brother shoulder significant left well create world.",
+        "ExitDate": "2024-10-25"
+      },
+      {
+        "ExitReason": "Allow range civil trouble fine ever type.",
+        "ExitDate": "2025-02-22"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "Python",
+        "Experience": "4 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Weber, Jackson and Herring",
+        "Client": "PLC",
+        "StartDate": "2024-09-07",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1016",
+    "EmployeeName": "Katelyn Howard",
+    "Designation": "Museum/gallery exhibitions officer",
+    "Status": "Active",
+    "ClientName": "Todd Ltd",
+    "PrimarySkills": "Television floor manager",
+    "RelevantExpPrimary": "3 years",
+    "SecondarySkills": "Dispensing optician",
+    "RelevantExpSecondary": "1 years",
+    "Remarks": "Foot strong southern skin claim sometimes total.",
+    "Skill": "Financial risk analyst",
+    "ProjectName": "Optimize Interactive Metrics",
+    "Department": "option",
+    "Location": "Leonton",
+    "WorkLocation": "Lake Markfort",
+    "ReportingManager": "Andrea Riley",
+    "OverAllExperience": "14 years",
+    "SkillCategory": "Full Stack",
+    "Practice": "group",
+    "CareerStartDate": "2014-09-13",
+    "DateOfJoining": "2024-02-07",
+    "ExitDate": null,
+    "TotalExpYears": 5.7,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Benched",
+    "BenchStartDate": "2020-05-12",
+    "TrainingPlanAssigned": "girl",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 71,
+    "ExpectedRollOffDate": "2024-07-02",
+    "PerformanceRating": "4.3",
+    "ExitStatus": "Active",
+    "Salary": "148992",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Simple girl worker would pick.",
+        "ExitDate": "2024-09-16"
+      },
+      {
+        "ExitReason": "Thousand billion whom.",
+        "ExitDate": "2024-09-05"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "5 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Fuller-Nguyen",
+        "Client": "LLC",
+        "StartDate": "2024-10-14",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Thomas-Rose",
+        "Client": "PLC",
+        "StartDate": "2025-04-02",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1017",
+    "EmployeeName": "Larry Bailey",
+    "Designation": "Designer, textile",
+    "Status": "Active",
+    "ClientName": "Smith, Klein and Coleman",
+    "PrimarySkills": "Arts administrator",
+    "RelevantExpPrimary": "8 years",
+    "SecondarySkills": "Designer, furniture",
+    "RelevantExpSecondary": "3 years",
+    "Remarks": "While provide manager according cultural.",
+    "Skill": "Research scientist (life sciences)",
+    "ProjectName": "Enhance Dot-Com Synergies",
+    "Department": "old",
+    "Location": "North Joanhaven",
+    "WorkLocation": "South Glendaside",
+    "ReportingManager": "Jonathan Quinn",
+    "OverAllExperience": "5 years",
+    "SkillCategory": "Backend",
+    "Practice": "miss",
+    "CareerStartDate": "2014-05-12",
+    "DateOfJoining": "2022-08-08",
+    "ExitDate": null,
+    "TotalExpYears": 13.0,
+    "WorkMode": "Hybrid",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2018-12-24",
+    "TrainingPlanAssigned": "agreement",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 35,
+    "ExpectedRollOffDate": "2025-02-04",
+    "PerformanceRating": "2.1",
+    "ExitStatus": "Exited",
+    "Salary": "86080",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Bank law but ability social down thought.",
+        "ExitDate": "2024-12-31"
+      },
+      {
+        "ExitReason": "Feel consider expert.",
+        "ExitDate": "2025-04-22"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Mendez, Thomas and Willis",
+        "Client": "and Sons",
+        "StartDate": "2025-03-15",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Jackson Group",
+        "Client": "Ltd",
+        "StartDate": "2024-12-29",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1018",
+    "EmployeeName": "Kenneth Riddle",
+    "Designation": "Economist",
+    "Status": "Active",
+    "ClientName": "Garrett Group",
+    "PrimarySkills": "Designer, ceramics/pottery",
+    "RelevantExpPrimary": "5 years",
+    "SecondarySkills": "Chartered accountant",
+    "RelevantExpSecondary": "2 years",
+    "Remarks": "Image meet trip attack century during.",
+    "Skill": "Tree surgeon",
+    "ProjectName": "Unleash Vertical E-Commerce",
+    "Department": "wonder",
+    "Location": "Jeremyborough",
+    "WorkLocation": "North Stevenside",
+    "ReportingManager": "Bethany Mclean",
+    "OverAllExperience": "9 years",
+    "SkillCategory": "Product Manager",
+    "Practice": "develop",
+    "CareerStartDate": "2018-01-30",
+    "DateOfJoining": "2023-06-21",
+    "ExitDate": null,
+    "TotalExpYears": 13.8,
+    "WorkMode": "Remote",
+    "BenchStatus": "Benched",
+    "BenchStartDate": "2021-11-12",
+    "TrainingPlanAssigned": "attorney",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 42,
+    "ExpectedRollOffDate": "2024-07-09",
+    "PerformanceRating": "4.6",
+    "ExitStatus": "Active",
+    "Salary": "123329",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Interesting billion both.",
+        "ExitDate": "2024-11-07"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Patel Inc",
+        "Client": "and Sons",
+        "StartDate": "2024-04-26",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Murphy-Fernandez",
+        "Client": "Inc",
+        "StartDate": "2025-03-07",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1019",
+    "EmployeeName": "Timothy Berg",
+    "Designation": "Futures trader",
+    "Status": "Inactive",
+    "ClientName": "Carroll-Chan",
+    "PrimarySkills": "Personnel officer",
+    "RelevantExpPrimary": "8 years",
+    "SecondarySkills": "Arts administrator",
+    "RelevantExpSecondary": "2 years",
+    "Remarks": "Somebody station weight agency.",
+    "Skill": "Translator",
+    "ProjectName": "E-Enable Seamless Action-Items",
+    "Department": "none",
+    "Location": "Johnville",
+    "WorkLocation": "Port Amandabury",
+    "ReportingManager": "Mrs. Anna Hester",
+    "OverAllExperience": "12 years",
+    "SkillCategory": "Technical Lead",
+    "Practice": "join",
+    "CareerStartDate": "2016-09-29",
+    "DateOfJoining": "2023-10-16",
+    "ExitDate": null,
+    "TotalExpYears": 6.7,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2018-04-09",
+    "TrainingPlanAssigned": "before",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 45,
+    "ExpectedRollOffDate": "2025-05-09",
+    "PerformanceRating": "2.0",
+    "ExitStatus": "Exited",
+    "Salary": "43537",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Structure act grow easy.",
+        "ExitDate": "2024-11-21"
+      },
+      {
+        "ExitReason": "By current program take plan case evidence.",
+        "ExitDate": "2024-06-26"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Delgado and Sons",
+        "Client": "PLC",
+        "StartDate": "2025-02-13",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1020",
+    "EmployeeName": "Todd Caldwell",
+    "Designation": "Engineer, civil (contracting)",
+    "Status": "Active",
+    "ClientName": "Boyd-Brooks",
+    "PrimarySkills": "Recruitment consultant",
+    "RelevantExpPrimary": "5 years",
+    "SecondarySkills": "Training and development officer",
+    "RelevantExpSecondary": "5 years",
+    "Remarks": "Congress success later thousand.",
+    "Skill": "Insurance account manager",
+    "ProjectName": "Strategize 24/365 Platforms",
+    "Department": "now",
+    "Location": "Charlesmouth",
+    "WorkLocation": "South Robert",
+    "ReportingManager": "David Bell",
+    "OverAllExperience": "15 years",
+    "SkillCategory": "Full Stack",
+    "Practice": "pass",
+    "CareerStartDate": "2014-09-29",
+    "DateOfJoining": "2020-09-27",
+    "ExitDate": "2021-08-03",
+    "TotalExpYears": 6.6,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Benched",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "nearly",
+    "TrainingCompletionStatus": "NotStarted",
+    "FitmentScore": 0,
+    "ExpectedRollOffDate": "2024-02-10",
+    "PerformanceRating": "1.4",
+    "ExitStatus": "Pending",
+    "Salary": "149274",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Then worry travel seem he expert effect list.",
+        "ExitDate": "2024-11-14"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "Node.js",
+        "Experience": "2 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "4 years"
+      },
+      {
+        "SkillName": "React",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Shaw, Brown and Martinez",
+        "Client": "Ltd",
+        "StartDate": "2024-06-19",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1021",
+    "EmployeeName": "Meagan Price",
+    "Designation": "Education administrator",
+    "Status": "Active",
+    "ClientName": "Macdonald PLC",
+    "PrimarySkills": "Paediatric nurse",
+    "RelevantExpPrimary": "6 years",
+    "SecondarySkills": "Therapist, sports",
+    "RelevantExpSecondary": "5 years",
+    "Remarks": "Couple as continue beautiful food show focus.",
+    "Skill": "Engineer, broadcasting (operations)",
+    "ProjectName": "Synthesize Virtual E-Markets",
+    "Department": "despite",
+    "Location": "Juanchester",
+    "WorkLocation": "Caitlinhaven",
+    "ReportingManager": "Jennifer Jones",
+    "OverAllExperience": "9 years",
+    "SkillCategory": "Frontend",
+    "Practice": "past",
+    "CareerStartDate": "2013-05-08",
+    "DateOfJoining": "2021-08-20",
+    "ExitDate": null,
+    "TotalExpYears": 4.1,
+    "WorkMode": "Remote",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "2015-10-03",
+    "TrainingPlanAssigned": "western",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 69,
+    "ExpectedRollOffDate": "2025-08-25",
+    "PerformanceRating": "2.7",
+    "ExitStatus": "Exited",
+    "Salary": "103389",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Condition everybody spend drug eat reduce.",
+        "ExitDate": "2024-12-18"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "Node.js",
+        "Experience": "3 years"
+      },
+      {
+        "SkillName": "React",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Smith, Lambert and Williams",
+        "Client": "and Sons",
+        "StartDate": "2025-01-05",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Smith Inc",
+        "Client": "Group",
+        "StartDate": "2024-12-01",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1022",
+    "EmployeeName": "Sandra Smith",
+    "Designation": "Professor Emeritus",
+    "Status": "Active",
+    "ClientName": "Adams Inc",
+    "PrimarySkills": "Retail banker",
+    "RelevantExpPrimary": "6 years",
+    "SecondarySkills": "Quantity surveyor",
+    "RelevantExpSecondary": "4 years",
+    "Remarks": "Ground ability although clearly less tough.",
+    "Skill": "Aeronautical engineer",
+    "ProjectName": "Re-Contextualize Synergistic Web Services",
+    "Department": "street",
+    "Location": "Lake Lindaville",
+    "WorkLocation": "Williamsstad",
+    "ReportingManager": "Katherine Phillips",
+    "OverAllExperience": "11 years",
+    "SkillCategory": "Backend",
+    "Practice": "her",
+    "CareerStartDate": "2015-12-20",
+    "DateOfJoining": "2023-04-05",
+    "ExitDate": null,
+    "TotalExpYears": 4.4,
+    "WorkMode": "Hybrid",
+    "BenchStatus": "Benched",
+    "BenchStartDate": "2022-02-11",
+    "TrainingPlanAssigned": "pattern",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 85,
+    "ExpectedRollOffDate": "2024-01-23",
+    "PerformanceRating": "1.8",
+    "ExitStatus": "Active",
+    "Salary": "52049",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Computer listen produce rise feel age.",
+        "ExitDate": "2024-06-24"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Upskilling",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Mcfarland and Sons",
+        "Client": "Inc",
+        "StartDate": "2024-10-03",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "Project": "Mccormick and Sons",
+        "Client": "Inc",
+        "StartDate": "2024-09-01",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1023",
+    "EmployeeName": "Margaret Garner",
+    "Designation": "Research officer, political party",
+    "Status": "Inactive",
+    "ClientName": "Dunn PLC",
+    "PrimarySkills": "Garment/textile technologist",
+    "RelevantExpPrimary": "6 years",
+    "SecondarySkills": "Education officer, environmental",
+    "RelevantExpSecondary": "5 years",
+    "Remarks": "So call instead.",
+    "Skill": "Research officer, trade union",
+    "ProjectName": "Brand Dot-Com Content",
+    "Department": "fly",
+    "Location": "North Elizabethmouth",
+    "WorkLocation": "North Kurtmouth",
+    "ReportingManager": "Sharon Moore",
+    "OverAllExperience": "5 years",
+    "SkillCategory": "DevOps",
+    "Practice": "hand",
+    "CareerStartDate": "2018-06-15",
+    "DateOfJoining": "2023-03-13",
+    "ExitDate": null,
+    "TotalExpYears": 10.7,
+    "WorkMode": "Remote",
+    "BenchStatus": "Allocated",
+    "BenchStartDate": "",
+    "TrainingPlanAssigned": "identify",
+    "TrainingCompletionStatus": "Completed",
+    "FitmentScore": 84,
+    "ExpectedRollOffDate": "2025-07-26",
+    "PerformanceRating": "1.2",
+    "ExitStatus": "Active",
+    "Salary": "134209",
+    "AvailabilityStatus": "Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Watch statement stuff day.",
+        "ExitDate": "2025-01-30"
+      },
+      {
+        "ExitReason": "Share recently traditional meet.",
+        "ExitDate": "2024-11-22"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "SQL",
+        "Experience": "4 years"
+      },
+      {
+        "SkillName": "Node.js",
+        "Experience": "1 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      },
+      {
+        "PlanName": "Client Onboarding",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Cooper Ltd",
+        "Client": "Ltd",
+        "StartDate": "2024-09-27",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  },
+  {
+    "EmployeeID": "EMP1024",
+    "EmployeeName": "Timothy Williams",
+    "Designation": "Surveyor, building",
+    "Status": "Active",
+    "ClientName": "Rodriguez-Thomas",
+    "PrimarySkills": "Recycling officer",
+    "RelevantExpPrimary": "3 years",
+    "SecondarySkills": "Scientist, forensic",
+    "RelevantExpSecondary": "3 years",
+    "Remarks": "Particularly safe true try rise my.",
+    "Skill": "Orthoptist",
+    "ProjectName": "Embrace Out-Of-The-Box E-Services",
+    "Department": "listen",
+    "Location": "Clinehaven",
+    "WorkLocation": "North Valeriehaven",
+    "ReportingManager": "Melissa Cannon",
+    "OverAllExperience": "6 years",
+    "SkillCategory": "Engineering Manager",
+    "Practice": "business",
+    "CareerStartDate": "2016-09-23",
+    "DateOfJoining": "2020-11-27",
+    "ExitDate": "2022-08-26",
+    "TotalExpYears": 13.3,
+    "WorkMode": "Onsite",
+    "BenchStatus": "Benched",
+    "BenchStartDate": null,
+    "TrainingPlanAssigned": "approach",
+    "TrainingCompletionStatus": "InProgress",
+    "FitmentScore": 84,
+    "ExpectedRollOffDate": "2024-05-22",
+    "PerformanceRating": "1.3",
+    "ExitStatus": "Pending",
+    "Salary": "102216",
+    "AvailabilityStatus": "Not Available",
+    "BenchExitDetails": [
+      {
+        "ExitReason": "Factor per nice official real.",
+        "ExitDate": "2024-09-17"
+      }
+    ],
+    "Skills": [
+      {
+        "SkillName": "C#",
+        "Experience": "3 years"
+      },
+      {
+        "SkillName": "Node.js",
+        "Experience": "5 years"
+      },
+      {
+        "SkillName": "C#",
+        "Experience": "2 years"
+      }
+    ],
+    "EngagementPlans": [
+      {
+        "PlanName": "Project Shadowing",
+        "StartDate": "2025-04-22",
+        "EndDate": "2025-04-22"
+      }
+    ],
+    "Allocations": [
+      {
+        "Project": "Arnold-Morris",
+        "Client": "and Sons",
+        "StartDate": "2025-02-24",
+        "EndDate": "2025-04-22"
+      }
+    ]
+  }
+]

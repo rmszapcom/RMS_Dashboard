@@ -1,0 +1,20 @@
+/* 
+.css-vppi7n-MuiInputBase-root-MuiOutlinedInput-root {
+    font-weight: 400;
+        font-size: 0.85rem !important;
+        width: 64.5vw;
+        height: 45px;
+} */
+
+.css-r3gqid-MuiButtonBase-root-MuiButton-root{
+    border-color:#1C196E;
+        background-color: #1C196E;
+        color:#1C196E;
+        /* --variant-textColor: #1976d2;
+        --variant-outlinedColor: #1976d2; */
+}
+
+.css-1uf3beq-MuiInputBase-root-MuiOutlinedInput-root {
+    font-size: 0.85rem !important;
+        height: 45px;
+}
