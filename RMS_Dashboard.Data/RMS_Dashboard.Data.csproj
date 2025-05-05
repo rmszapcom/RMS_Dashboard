@@ -17,4 +17,10 @@
     <ProjectReference Include="..\RMS_Dashboard.Core\RMS_Dashboard.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\Back_Up_Dump_data.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
