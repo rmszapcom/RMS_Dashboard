@@ -23,5 +23,11 @@ public class EmployeeRepository : IEmployeeRepository
         return await _context.Employees
             .FirstOrDefaultAsync(e => e.EmployeeID == employeeId);
     }
+
+    public async Task SaveChangesAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
+
 }
 
