@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RMS_Dashboard.Core.DTOs;
 using RMS_Dashboard.Core.Entities;
 using RMS_Dashboard.Core.ServiceContracts;
 using RMS_Dashboard.Data;
@@ -58,6 +59,18 @@ namespace RMS_Dashboard.Controllers
                     System.IO.File.Delete(tempPath);
                 }
             }
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchEmployee(string id, [FromBody] UpdateEmployeeDto updateDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await _employeeService.UpdateEmployeeAsync(id, updateDto);
+            if (!result) return NotFound("Employee not found.");
+
+            return NoContent();
         }
 
     }
