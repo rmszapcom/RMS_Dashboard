@@ -8,7 +8,8 @@ import {
   Select,
   FormControl,
 } from "@mui/material";
-import ConfirmationDialog from "../ConfirmationDialog"; // Importing the confirmation dialog
+import { useTheme } from "@mui/material/styles";
+import ConfirmationDialog from "../ConfirmationDialog";
 
 const modalStyle = {
   position: "absolute",
@@ -60,33 +61,47 @@ function ProjectAllocationModal({
     setConfirmDialogOpen(false);
   };
 
-  // Ensure that employee is not null before accessing its properties in the description
+  // Ensuring that employee is not null before accessing its properties in the description
   const employeeName = employee ? employee.EmployeeName : "Unknown Employee";
   const projectDescription = project ? project : "Unknown Project";
   const clientDescription = client ? client : "Unknown Client";
+
+  const theme = useTheme();
 
   return (
     <>
       <Modal open={open} onClose={handleClose}>
         <Box sx={modalStyle}>
-          <Typography variant="h6" mb={2}>
+          <Typography
+            variant="h6"
+            mb={2}
+            sx={{ color: theme.palette.primary.main }}
+          >
             Project Allocation
           </Typography>
 
           <FormControl fullWidth margin="normal" size="small">
-            <Typography variant="body2" sx={{ mb: 0.5, fontWeight: 500 }}>
+            <Typography
+              variant="body2"
+              sx={{
+                mb: 0.5,
+                fontWeight: 500,
+                color: theme.palette.primary.main,
+              }}
+            >
               Select Client
             </Typography>
             <Select
               value={client}
               onChange={(e) => setClient(e.target.value)}
+              sx={{ fontSize: "0.8rem" }}
               displayEmpty
             >
-              <MenuItem value="" disabled>
+              <MenuItem value="" disabled sx={{ fontSize: "0.8rem" }}>
                 Select a client
               </MenuItem>
               {clients.map((cli, idx) => (
-                <MenuItem key={idx} value={cli}>
+                <MenuItem key={idx} value={cli} sx={{ fontSize: "0.8rem" }}>
                   {cli}
                 </MenuItem>
               ))}
@@ -94,19 +109,27 @@ function ProjectAllocationModal({
           </FormControl>
 
           <FormControl fullWidth margin="normal" size="small">
-            <Typography variant="body2" sx={{ mb: 0.5, fontWeight: 500 }}>
+            <Typography
+              variant="body2"
+              sx={{
+                mb: 0.5,
+                fontWeight: 500,
+                color: theme.palette.primary.main,
+              }}
+            >
               Select Project
             </Typography>
             <Select
               value={project}
               onChange={(e) => setProject(e.target.value)}
+              sx={{ fontSize: "0.8rem" }}
               displayEmpty
             >
-              <MenuItem value="" disabled>
+              <MenuItem value="" disabled sx={{ fontSize: "0.8rem" }}>
                 Select a project
               </MenuItem>
               {projects.map((proj, idx) => (
-                <MenuItem key={idx} value={proj}>
+                <MenuItem key={idx} value={proj} sx={{ fontSize: "0.8rem" }}>
                   {proj}
                 </MenuItem>
               ))}
@@ -114,13 +137,18 @@ function ProjectAllocationModal({
           </FormControl>
 
           <Box mt={3} display="flex" justifyContent="flex-end" gap={1}>
-            <Button variant="outlined" onClick={handleClose}>
+            <Button
+              variant="outlined"
+              onClick={handleClose}
+              sx={{ fontSize: "0.8rem" }}
+            >
               Cancel
             </Button>
             <Button
               variant="contained"
               onClick={handleSubmit}
               disabled={!project || !client}
+              sx={{ fontSize: "0.8rem" }}
             >
               Save
             </Button>

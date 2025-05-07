@@ -9,6 +9,7 @@ import {
   IconButton,
   Divider,
 } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import CloseIcon from "@mui/icons-material/Close";
 
 const style = {
@@ -49,7 +50,8 @@ function EditEmployeeModal({ open, handleClose, employee = {}, handleSave }) {
     handleClose();
   };
 
-  // List of fields that need to be disabled (fields marked with "N")
+  const theme = useTheme();
+
   const disabledFields = [
     "EmployeeID",
     "EmployeeName",
@@ -57,8 +59,10 @@ function EditEmployeeModal({ open, handleClose, employee = {}, handleSave }) {
     "CareerStartDate",
     "DateOfJoining",
     "ExitDate",
+    "TotalExpYears",
     "OverAllExperience",
     "FitmentScore",
+    "PerformanceRating",
     "Salary",
   ];
 
@@ -139,7 +143,10 @@ function EditEmployeeModal({ open, handleClose, employee = {}, handleSave }) {
           alignItems="center"
           mb={3}
         >
-          <Typography variant="h6" sx={{ fontWeight: 500 }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 500, color: theme.palette.primary.main }}
+          >
             Edit Employee
           </Typography>
           <IconButton onClick={handleClose} size="small">
