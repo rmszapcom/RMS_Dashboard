@@ -1,10 +1,6 @@
 ﻿using OfficeOpenXml;
 using RMS_Dashboard.Core.Entities;
-using System;
-using System.IO;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 
 namespace RMS_Dashboard.Data
 {
@@ -38,70 +34,39 @@ namespace RMS_Dashboard.Data
                     var designation = worksheet.Cells[row, 5].Text;
                     var status = worksheet.Cells[row, 6].Text;
                     var clientName = worksheet.Cells[row, 7].Text;
-                    var remarks = worksheet.Cells[row, 8].Text;
-                    var skills = worksheet.Cells[row, 9].Text;
                     var benchStatus = worksheet.Cells[row, 10].Text;
-                    var exitStatus = worksheet.Cells[row, 11].Text;
-                    var workLocation = worksheet.Cells[row, 12].Text;
                     var projectName = worksheet.Cells[row, 14].Text;
-                    var location = worksheet.Cells[row, 15].Text;
+                    var workLocation = worksheet.Cells[row, 15].Text;
                     var careerDate = worksheet.Cells[row, 16].Text;
-                    DateTime? parsedCareerDate = null;
-                    if (DateTime.TryParse(careerDate, out var tempCareerDate))
-                    {
-                        parsedCareerDate = DateTime.SpecifyKind(tempCareerDate, DateTimeKind.Utc);
-                    }
-
                     var overAllExp = worksheet.Cells[row, 17].Text;
                     var pSkills = worksheet.Cells[row, 18].Text;
                     var relevantpriExp = worksheet.Cells[row, 19].Text;
                     var sSkills = worksheet.Cells[row, 20].Text;
                     var relevantSecExp = worksheet.Cells[row, 21].Text;
                     var skillCategory = worksheet.Cells[row, 22].Text;
+                    var isAllocated = worksheet.Cells[row, 26].Text;
+                    var isEngaged = worksheet.Cells[row, 27].Text;
 
-                    string department = worksheet.Cells[row, 23].Text; 
-                    if (string.IsNullOrWhiteSpace(department))
+                    DateTime? parsedCareerDate = null;
+                    if (DateTime.TryParse(careerDate, out var tempCareerDate))
                     {
-                        _logger.LogWarning($"Department is missing for row {row}, assigning default value 'Unknown'.");
-                        department = "Unknown";
+                        parsedCareerDate = DateTime.SpecifyKind(tempCareerDate, DateTimeKind.Utc);
                     }
-                    string practice = worksheet.Cells[row, 24].Text;
+
+
+                    string practice = worksheet.Cells[row, 23].Text;
                     if (string.IsNullOrWhiteSpace(practice))
                     {
                         _logger.LogWarning($"Practice is missing for row {row}, assigning default value 'Unknown'.");
                         practice = "Unknown"; 
                     }
-                    string workMode = worksheet.Cells[row, 25].Text;
+                    string workMode = worksheet.Cells[row, 12].Text;
                     if (string.IsNullOrWhiteSpace(workMode))
                     {
                         _logger.LogWarning($"WorkMode is missing for row {row}, assigning default value 'Unknown'.");
                         workMode = "Unknown"; 
                     }
-                    string trainingPlanAssigned = worksheet.Cells[row, 26].Text;
-                    if (string.IsNullOrWhiteSpace(trainingPlanAssigned))
-                    {
-                        _logger.LogWarning($"TrainingPlanAssigned is missing for row {row}, assigning default value 'Not Assigned'.");
-                        trainingPlanAssigned = "Not Assigned"; 
-                    }
-                    string trainingCompletionStatus = worksheet.Cells[row, 27].Text; 
-                    if (string.IsNullOrWhiteSpace(trainingCompletionStatus))
-                    {
-                        _logger.LogWarning($"TrainingCompletionStatus is missing for row {row}, assigning default value 'Not Completed'.");
-                        trainingCompletionStatus = "Not Completed";
-                    }
-                    string performanceRating = worksheet.Cells[row, 28].Text; 
-                    if (string.IsNullOrWhiteSpace(performanceRating))
-                    {
-                        _logger.LogWarning($"PerformanceRating is missing for row {row}, assigning default value 'Not Rated'.");
-                        performanceRating = "Not Rated";
-                    }
-                    string salary = worksheet.Cells[row, 29].Text; 
-                    if (string.IsNullOrWhiteSpace(salary))
-                    {
-                        _logger.LogWarning($"Salary is missing for row {row}, assigning default value '0'.");
-                        salary = "0"; 
-                    }
-
+                  
                     var employee = new Employee
                     {
                         EmployeeID = employeeId,
@@ -111,13 +76,11 @@ namespace RMS_Dashboard.Data
                         Designation = designation,
                         Status = status,
                         ClientName = clientName,
-                        Remarks = remarks,
-                        Skill = skills,
                         BenchStatus = benchStatus,
-                        ExitStatus = exitStatus,
+                        IsEngaged = isEngaged,
+                        IsAllocated = isAllocated,
                         WorkLocation = workLocation,
                         ProjectName = projectName,
-                        Location = location,
                         CareerStartDate = parsedCareerDate,
                         OverAllExperience = overAllExp,
                         PrimarySkills = pSkills,
@@ -125,13 +88,8 @@ namespace RMS_Dashboard.Data
                         SecondarySkills = sSkills,
                         RelevantExpSecondary = relevantSecExp,
                         SkillCategory = skillCategory,
-                        Department = department,
                         Practice = practice,
                         WorkMode = workMode,
-                        TrainingPlanAssigned = trainingPlanAssigned,
-                        TrainingCompletionStatus = trainingCompletionStatus,
-                        PerformanceRating= performanceRating,
-                        Salary= salary,
 
                     };
 
@@ -142,7 +100,7 @@ namespace RMS_Dashboard.Data
                     }
                     else
                     {
-                        await _context.Employees.AddAsync(employee); // ← This was missing!
+                        await _context.Employees.AddAsync(employee); 
                     }
 
                 }

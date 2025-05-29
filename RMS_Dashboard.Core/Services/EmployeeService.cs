@@ -35,24 +35,21 @@ public class EmployeeService : IEmployeeService
         employee.RelevantExpPrimary = updatedData.RelevantExpPrimary ?? employee.RelevantExpPrimary;
         employee.SecondarySkills = updatedData.SecondarySkills ?? employee.SecondarySkills;
         employee.RelevantExpSecondary = updatedData.RelevantExpSecondary ?? employee.RelevantExpSecondary;
-        employee.Remarks = updatedData.Remarks ?? employee.Remarks;
-        employee.Skill = updatedData.Skill ?? employee.Skill;
         employee.ProjectName = updatedData.ProjectName ?? employee.ProjectName;
-        employee.Department = updatedData.Department ?? employee.Department;
-        employee.Location = updatedData.Location ?? employee.Location;
         employee.ReportingManager = updatedData.ReportingManager ?? employee.ReportingManager;
         employee.SkillCategory = updatedData.SkillCategory ?? employee.SkillCategory;
         employee.Practice = updatedData.Practice ?? employee.Practice;
         employee.WorkMode = updatedData.WorkMode ?? employee.WorkMode;
+        employee.WorkLocation = updatedData.WorkLocation ?? employee.WorkLocation;
         employee.BenchStatus = updatedData.BenchStatus ?? employee.BenchStatus;
         employee.BenchStartDate = updatedData.BenchStartDate ?? employee.BenchStartDate;
-        employee.TrainingPlanAssigned = updatedData.TrainingPlanAssigned ?? employee.TrainingPlanAssigned;
-        employee.TrainingCompletionStatus = updatedData.TrainingCompletionStatus ?? employee.TrainingCompletionStatus;
-        employee.FitmentScore = updatedData.FitmentScore ?? employee.FitmentScore;
+        employee.ReportingManager = updatedData.ReportingManager ?? employee.ReportingManager;
+        employee.OverAllExperience = updatedData.OverAllExperience ?? employee.OverAllExperience;
+        employee.Practice = updatedData.Practice ?? employee.Practice;
+        employee.IsAllocated = updatedData.IsAllocated ?? employee.IsAllocated;
+        employee.IsEngaged = updatedData.IsEngaged ?? employee.IsEngaged;
         employee.ExpectedRollOffDate = updatedData.ExpectedRollOffDate ?? employee.ExpectedRollOffDate;
-        employee.ExitStatus = updatedData.ExitStatus ?? employee.ExitStatus;
-        employee.AvailabilityStatus = updatedData.AvailabilityStatus ?? employee.AvailabilityStatus;
-
+       
         await _employeeRepository.SaveChangesAsync();
         return true;
     }

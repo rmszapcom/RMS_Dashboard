@@ -19,11 +19,7 @@ namespace RMS_Dashboard.Core.Entities
         public string RelevantExpPrimary { get; set; }
         public string SecondarySkills { get; set; }
         public string RelevantExpSecondary { get; set; }
-        public string Remarks { get; set; }
-        public string Skill { get; set; }
         public string ProjectName { get; set; }
-        public string? Department { get; set; }
-        public string Location { get; set; }
         public string WorkLocation { get; set; }
         public string ReportingManager { get; set; }
         public string OverAllExperience { get; set; }
@@ -31,36 +27,20 @@ namespace RMS_Dashboard.Core.Entities
         public string Practice { get; set; }
         public DateTime? CareerStartDate { get; set; }
         public string DateOfJoining { get; set; }
-      
+
         [EnumDataType(typeof(WorkMode))]
         public string WorkMode { get; set; }
 
         [EnumDataType(typeof(BenchStatus))]
         public string BenchStatus { get; set; }
-        [EnumDataType(typeof(ExitStatus))]
-        public string ExitStatus { get; set; }
-        public string TrainingPlanAssigned { get; set; }
-
-        [EnumDataType(typeof(TrainingCompletionStatus))]
-        public string TrainingCompletionStatus { get; set; }
-        public string PerformanceRating { get; set; }
-
-        [NotMapped]
-        public string AvailabilityStatus { get; set; }
-
-        public ICollection<BenchExitDetail> BenchExitDetails { get; set; }
-        public ICollection<EmployeeSkill> Skills { get; set; }
         public ICollection<EmployeeEngagementPlan> EngagementPlans { get; set; }
-        public ICollection<ResourceAllocation> Allocations { get; set; }
+        public string? IsEngaged { get; set; }
+
+        public string? IsAllocated { get; set; }
         public DateTime? ExitDate { get; set; }
         public decimal? TotalExpYears { get; set; }
-         public DateTime? BenchStartDate { get; set; }
-        [Range(0, 100)]
-        public int? FitmentScore { get; set; }
-
+        public DateTime? BenchStartDate { get; set; }
         public DateTime? ExpectedRollOffDate { get; set; }
-        public string Salary { get; set; }
-
 
     }
 

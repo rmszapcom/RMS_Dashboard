@@ -12,8 +12,8 @@ using RMS_Dashboard.Data;
 namespace RMS_Dashboard.Data.Migrations
 {
     [DbContext(typeof(RmsDbContext))]
-    [Migration("20250423065326_initialcreate")]
-    partial class initialcreate
+    [Migration("20250529171635_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,36 +24,6 @@ namespace RMS_Dashboard.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("RMS_Dashboard.Core.Entities.BenchExitDetail", b =>
-                {
-                    b.Property<int>("BenchExitID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("BenchExitID"));
-
-                    b.Property<string>("BenchCategory")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("EmpID")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("ExitReason")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("UpdatedOn")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("BenchExitID");
-
-                    b.HasIndex("EmpID");
-
-                    b.ToTable("BenchExitDetail");
-                });
 
             modelBuilder.Entity("RMS_Dashboard.Core.Entities.Employee", b =>
                 {
@@ -78,9 +48,6 @@ namespace RMS_Dashboard.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Department")
-                        .HasColumnType("text");
-
                     b.Property<string>("Designation")
                         .IsRequired()
                         .HasColumnType("text");
@@ -92,25 +59,16 @@ namespace RMS_Dashboard.Data.Migrations
                     b.Property<DateTime?>("ExitDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("ExitStatus")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<DateTime?>("ExpectedRollOffDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("FitmentScore")
-                        .HasColumnType("integer");
+                    b.Property<string>("IsAllocated")
+                        .HasColumnType("text");
 
-                    b.Property<string>("Location")
-                        .IsRequired()
+                    b.Property<string>("IsEngaged")
                         .HasColumnType("text");
 
                     b.Property<string>("OverAllExperience")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PerformanceRating")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -134,23 +92,11 @@ namespace RMS_Dashboard.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Remarks")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("ReportingManager")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Salary")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("SecondarySkills")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Skill")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -164,14 +110,6 @@ namespace RMS_Dashboard.Data.Migrations
 
                     b.Property<decimal?>("TotalExpYears")
                         .HasColumnType("numeric");
-
-                    b.Property<string>("TrainingCompletionStatus")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("TrainingPlanAssigned")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("WorkLocation")
                         .IsRequired()
@@ -222,41 +160,6 @@ namespace RMS_Dashboard.Data.Migrations
                     b.HasIndex("ProjectID");
 
                     b.ToTable("EmployeeEngagementPlan");
-                });
-
-            modelBuilder.Entity("RMS_Dashboard.Core.Entities.EmployeeSkill", b =>
-                {
-                    b.Property<int>("SkillID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("SkillID"));
-
-                    b.Property<string>("EmpID")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PastInitiative")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Skill")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("SkillDescription")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("TechStack")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("SkillID");
-
-                    b.HasIndex("EmpID");
-
-                    b.ToTable("EmployeeSkill");
                 });
 
             modelBuilder.Entity("RMS_Dashboard.Core.Entities.Project", b =>
@@ -314,9 +217,6 @@ namespace RMS_Dashboard.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("EmployeeID")
-                        .HasColumnType("text");
-
                     b.Property<string>("EmployeeName")
                         .IsRequired()
                         .HasColumnType("text");
@@ -330,22 +230,9 @@ namespace RMS_Dashboard.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EmployeeID");
-
                     b.HasIndex("ProjectID");
 
                     b.ToTable("ResourceAllocations");
-                });
-
-            modelBuilder.Entity("RMS_Dashboard.Core.Entities.BenchExitDetail", b =>
-                {
-                    b.HasOne("RMS_Dashboard.Core.Entities.Employee", "Employee")
-                        .WithMany("BenchExitDetails")
-                        .HasForeignKey("EmpID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Employee");
                 });
 
             modelBuilder.Entity("RMS_Dashboard.Core.Entities.EmployeeEngagementPlan", b =>
@@ -365,23 +252,8 @@ namespace RMS_Dashboard.Data.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("RMS_Dashboard.Core.Entities.EmployeeSkill", b =>
-                {
-                    b.HasOne("RMS_Dashboard.Core.Entities.Employee", "Employee")
-                        .WithMany("Skills")
-                        .HasForeignKey("EmpID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Employee");
-                });
-
             modelBuilder.Entity("RMS_Dashboard.Core.Entities.ResourceAllocation", b =>
                 {
-                    b.HasOne("RMS_Dashboard.Core.Entities.Employee", null)
-                        .WithMany("Allocations")
-                        .HasForeignKey("EmployeeID");
-
                     b.HasOne("RMS_Dashboard.Core.Entities.Project", null)
                         .WithMany("Allocations")
                         .HasForeignKey("ProjectID");
@@ -389,13 +261,7 @@ namespace RMS_Dashboard.Data.Migrations
 
             modelBuilder.Entity("RMS_Dashboard.Core.Entities.Employee", b =>
                 {
-                    b.Navigation("Allocations");
-
-                    b.Navigation("BenchExitDetails");
-
                     b.Navigation("EngagementPlans");
-
-                    b.Navigation("Skills");
                 });
 
             modelBuilder.Entity("RMS_Dashboard.Core.Entities.Project", b =>
