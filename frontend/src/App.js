@@ -1,7 +1,14 @@
 import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { GlobalStyles } from "@mui/material";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import AdminPanel from "./pages/AdminPanel";
 
 const theme = createTheme({
   typography: {
@@ -31,8 +38,13 @@ function App() {
           "*": { boxSizing: "border-box" },
         }}
       />
-      <Dashboard />
-      {/* <DashboardOverview /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }
