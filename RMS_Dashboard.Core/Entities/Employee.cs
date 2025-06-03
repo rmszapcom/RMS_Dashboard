@@ -38,10 +38,11 @@ namespace RMS_Dashboard.Core.Entities
 
         public string? IsAllocated { get; set; }
         public DateTime? ExitDate { get; set; }
-        public decimal? TotalExpYears { get; set; }
-        public DateTime? BenchStartDate { get; set; }
+        public string BenchStartDate { get; set; }
         public DateTime? ExpectedRollOffDate { get; set; }
 
+        public string Seniority { get; set; }   
+        public string ExperienceAtZapCom { get; set; }
     }
 
 }

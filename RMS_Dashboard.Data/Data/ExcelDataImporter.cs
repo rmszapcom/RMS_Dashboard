@@ -1,6 +1,6 @@
-﻿using OfficeOpenXml;
-using RMS_Dashboard.Core.Entities;
+﻿using RMS_Dashboard.Core.Entities;
 using Microsoft.Extensions.Logging;
+using ClosedXML.Excel;
 
 namespace RMS_Dashboard.Data
 {
@@ -17,35 +17,38 @@ namespace RMS_Dashboard.Data
 
         public async Task ImportEmployeesAsync(string filePath)
         {
-            ExcelPackage.License.SetNonCommercialPersonal("Soumya");
-
             try
             {
-                using var package = new ExcelPackage(new FileInfo(filePath));
-                var worksheet = package.Workbook.Worksheets[0];
-                var rowCount = worksheet.Dimension.Rows;
+                using var workbook = new XLWorkbook(filePath);
+                var worksheet = workbook.Worksheet(1); // or by name: workbook.Worksheet("Sheet1")
 
-                for (int row = 2; row <= rowCount; row++)
+                var firstRowUsed = worksheet.FirstRowUsed().RowNumber();
+                var lastRowUsed = worksheet.LastRowUsed().RowNumber();
+
+                for (int row = firstRowUsed + 1; row <= lastRowUsed; row++)
                 {
-                    var employeeId = worksheet.Cells[row, 1].Text;
-                    var employeeName = worksheet.Cells[row, 2].Text;
-                    var doj = worksheet.Cells[row, 3].Text;
-                    var reportingManager = worksheet.Cells[row, 4].Text;
-                    var designation = worksheet.Cells[row, 5].Text;
-                    var status = worksheet.Cells[row, 6].Text;
-                    var clientName = worksheet.Cells[row, 7].Text;
-                    var benchStatus = worksheet.Cells[row, 10].Text;
-                    var projectName = worksheet.Cells[row, 14].Text;
-                    var workLocation = worksheet.Cells[row, 15].Text;
-                    var careerDate = worksheet.Cells[row, 16].Text;
-                    var overAllExp = worksheet.Cells[row, 17].Text;
-                    var pSkills = worksheet.Cells[row, 18].Text;
-                    var relevantpriExp = worksheet.Cells[row, 19].Text;
-                    var sSkills = worksheet.Cells[row, 20].Text;
-                    var relevantSecExp = worksheet.Cells[row, 21].Text;
-                    var skillCategory = worksheet.Cells[row, 22].Text;
-                    var isAllocated = worksheet.Cells[row, 26].Text;
-                    var isEngaged = worksheet.Cells[row, 27].Text;
+                    var employeeId = worksheet.Cell(row, 1).GetValue<string>();
+                    var employeeName = worksheet.Cell(row, 2).GetValue<string>();
+                    var doj = worksheet.Cell(row, 3).GetValue<string>();
+                    var reportingManager = worksheet.Cell(row, 4).GetValue<string>();
+                    var designation = worksheet.Cell(row, 5).GetValue<string>();
+                    var status = worksheet.Cell(row, 6).GetValue<string>();
+                    var clientName = worksheet.Cell(row, 7).GetValue<string>();
+                    var benchStatus = worksheet.Cell(row, 10).GetValue<string>();
+                    var projectName = worksheet.Cell(row, 14).GetValue<string>();
+                    var workLocation = worksheet.Cell(row, 15).GetValue<string>();
+                    var careerDate = worksheet.Cell(row, 16).GetValue<string>();
+                    var overAllExp = worksheet.Cell(row, 17).GetValue<string>();
+                    var pSkills = worksheet.Cell(row, 18).GetValue<string>();
+                    var relevantpriExp = worksheet.Cell(row, 19).GetValue<string>();
+                    var sSkills = worksheet.Cell(row, 20).GetValue<string>();
+                    var relevantSecExp = worksheet.Cell(row, 21).GetValue<string>();
+                    var skillCategory = worksheet.Cell(row, 22).GetValue<string>();
+                    var seniority = worksheet.Cell(row, 26).GetValue<string>();
+                    var expAtZapCom = worksheet.Cell(row, 27).GetValue<string>();
+                    var isAllocated = worksheet.Cell(row, 28).GetValue<string>();
+                    var isEngaged = worksheet.Cell(row, 29).GetValue<string>();
+                    var benchStartDate = worksheet.Cell(row, 10).GetValue<string>();
 
                     DateTime? parsedCareerDate = null;
                     if (DateTime.TryParse(careerDate, out var tempCareerDate))
@@ -53,20 +56,20 @@ namespace RMS_Dashboard.Data
                         parsedCareerDate = DateTime.SpecifyKind(tempCareerDate, DateTimeKind.Utc);
                     }
 
-
-                    string practice = worksheet.Cells[row, 23].Text;
+                    string practice = worksheet.Cell(row, 23).GetValue<string>();
                     if (string.IsNullOrWhiteSpace(practice))
                     {
                         _logger.LogWarning($"Practice is missing for row {row}, assigning default value 'Unknown'.");
-                        practice = "Unknown"; 
+                        practice = "Unknown";
                     }
-                    string workMode = worksheet.Cells[row, 12].Text;
+
+                    string workMode = worksheet.Cell(row, 12).GetValue<string>();
                     if (string.IsNullOrWhiteSpace(workMode))
                     {
                         _logger.LogWarning($"WorkMode is missing for row {row}, assigning default value 'Unknown'.");
-                        workMode = "Unknown"; 
+                        workMode = "Unknown";
                     }
-                  
+
                     var employee = new Employee
                     {
                         EmployeeID = employeeId,
@@ -77,8 +80,6 @@ namespace RMS_Dashboard.Data
                         Status = status,
                         ClientName = clientName,
                         BenchStatus = benchStatus,
-                        IsEngaged = isEngaged,
-                        IsAllocated = isAllocated,
                         WorkLocation = workLocation,
                         ProjectName = projectName,
                         CareerStartDate = parsedCareerDate,
@@ -90,7 +91,10 @@ namespace RMS_Dashboard.Data
                         SkillCategory = skillCategory,
                         Practice = practice,
                         WorkMode = workMode,
-
+                        Seniority = seniority,
+                        ExperienceAtZapCom = expAtZapCom,
+                        BenchStartDate = benchStartDate
+                        // Optionally include isAllocated, isEngaged if part of Employee entity
                     };
 
                     var existing = await _context.Employees.FindAsync(employee.EmployeeID);
@@ -100,9 +104,8 @@ namespace RMS_Dashboard.Data
                     }
                     else
                     {
-                        await _context.Employees.AddAsync(employee); 
+                        await _context.Employees.AddAsync(employee);
                     }
-
                 }
 
                 await _context.SaveChangesAsync();
