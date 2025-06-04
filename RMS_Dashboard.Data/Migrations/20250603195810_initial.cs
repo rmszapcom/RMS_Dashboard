@@ -38,9 +38,10 @@ namespace RMS_Dashboard.Data.Migrations
                     IsEngaged = table.Column<string>(type: "text", nullable: true),
                     IsAllocated = table.Column<string>(type: "text", nullable: true),
                     ExitDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    TotalExpYears = table.Column<decimal>(type: "numeric", nullable: true),
-                    BenchStartDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    ExpectedRollOffDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    BenchStartDate = table.Column<string>(type: "text", nullable: false),
+                    ExpectedRollOffDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    Seniority = table.Column<string>(type: "text", nullable: false),
+                    ExperienceAtZapCom = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

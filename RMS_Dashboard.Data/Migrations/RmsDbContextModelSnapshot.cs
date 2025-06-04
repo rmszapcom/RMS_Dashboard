@@ -27,8 +27,9 @@ namespace RMS_Dashboard.Data.Migrations
                     b.Property<string>("EmployeeID")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("BenchStartDate")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("BenchStartDate")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("BenchStatus")
                         .IsRequired()
@@ -58,6 +59,10 @@ namespace RMS_Dashboard.Data.Migrations
 
                     b.Property<DateTime?>("ExpectedRollOffDate")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ExperienceAtZapCom")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("IsAllocated")
                         .HasColumnType("text");
@@ -97,6 +102,10 @@ namespace RMS_Dashboard.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Seniority")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("SkillCategory")
                         .IsRequired()
                         .HasColumnType("text");
@@ -104,9 +113,6 @@ namespace RMS_Dashboard.Data.Migrations
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<decimal?>("TotalExpYears")
-                        .HasColumnType("numeric");
 
                     b.Property<string>("WorkLocation")
                         .IsRequired()

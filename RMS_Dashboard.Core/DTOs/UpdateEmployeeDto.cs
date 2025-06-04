@@ -21,7 +21,7 @@
         public string? IsAllocated { get; set; }
 
         public string? BenchStatus { get; set; }
-        public DateTime? BenchStartDate { get; set; }
+        public string BenchStartDate { get; set; }
         public DateTime? ExpectedRollOffDate { get; set; }
     }
 }
