@@ -10,16 +10,16 @@ export const calculateEmployeeStats = (employeeData) => {
   if (employeeData && employeeData.length > 0) {
     stats.total = employeeData.length;
     stats.billable = employeeData.filter(
-      (emp) => emp.BenchStatus === "Allocated"
+      (emp) => emp.status?.trim().toLowerCase() === "allocated"
     ).length;
     stats.benched = employeeData.filter(
-      (emp) => emp.BenchStatus === "Benched"
+      (emp) => emp.status?.trim().toLowerCase() === "bench"
     ).length;
     stats.shadow = employeeData.filter(
-      (emp) => emp.BenchStatus === "Shadow"
+      (emp) => emp.status?.trim().toLowerCase() === "shadow"
     ).length;
-    stats.interns = employeeData.filter((emp) =>
-      emp.Designation?.toLowerCase().includes("associate")
+    stats.interns = employeeData.filter(
+      (emp) => emp.status?.trim().toLowerCase() === "associate"
     ).length;
   }
 

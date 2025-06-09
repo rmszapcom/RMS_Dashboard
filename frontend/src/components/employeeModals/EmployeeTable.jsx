@@ -82,7 +82,7 @@ function EmployeeTable({
                       >
                         Edit
                       </Button>
-                      {emp.BenchStatus === "Allocated" && (
+                      {emp.status === "Allocated" && (
                         <Button
                           variant="outlined"
                           color="error"
@@ -92,8 +92,7 @@ function EmployeeTable({
                           Release
                         </Button>
                       )}
-                      {(emp.BenchStatus === "Benched" ||
-                        emp.BenchStatus === "Shadow") && (
+                      {(emp.status === "Bench" || emp.status === "Shadow") && (
                         <Button
                           variant="outlined"
                           color="success"

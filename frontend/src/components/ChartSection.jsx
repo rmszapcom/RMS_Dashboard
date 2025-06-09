@@ -79,7 +79,7 @@ const ChartSection = ({ employeeData }) => {
               showFilter
               currentFilter={categoryFilter}
               onFilterChange={setCategoryFilter}
-              filterOptions={["All", "Billable", "Shadow", "Benched"]}
+              filterOptions={["All", "Allocated", "Shadow", "Bench"]}
             >
               <Box sx={{ width: 400, height: 220 }}>
                 <EmployeeCategoryChart
@@ -96,7 +96,7 @@ const ChartSection = ({ employeeData }) => {
               showFilter
               currentFilter={experienceFilter}
               onFilterChange={setExperienceFilter}
-              filterOptions={["All", "Billable", "Shadow", "Benched"]}
+              filterOptions={["All", "Allocated", "Shadow", "Bench"]}
             >
               <Box sx={{ width: 400, height: 220 }}>
                 <ExperienceChart

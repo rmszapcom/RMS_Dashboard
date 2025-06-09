@@ -21,11 +21,11 @@ const EmployeesChart = ({ employeeData }) => {
     if (!employeeData) return [];
     switch (status) {
       case "Allocated":
-        return employeeData.filter((emp) => emp.BenchStatus === "Allocated");
+        return employeeData.filter((emp) => emp.status === "Allocated");
       case "Benched":
-        return employeeData.filter((emp) => emp.BenchStatus === "Benched");
+        return employeeData.filter((emp) => emp.status === "Bench");
       case "Shadow":
-        return employeeData.filter((emp) => emp.BenchStatus === "Shadow");
+        return employeeData.filter((emp) => emp.status === "Shadow");
       default:
         return [];
     }

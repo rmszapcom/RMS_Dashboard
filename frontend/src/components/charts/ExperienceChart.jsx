@@ -7,28 +7,28 @@ const baseLabels = ["Junior", "Mid-Senior", "Senior"];
 const options = {
   responsive: true,
   plugins: {
-    legend: {
-      position: "top",
-    },
-    tooltip: {
-      enabled: true,
-    },
+    legend: { position: "top" },
+    tooltip: { enabled: true },
   },
   scales: {
-    x: {
-      title: {
-        display: true,
-        text: "Experience Level",
-      },
-    },
-    y: {
-      title: {
-        display: true,
-        text: "Employees",
-      },
-      beginAtZero: true,
-    },
+    x: { title: { display: true, text: "Experience Level" } },
+    y: { title: { display: true, text: "Employees" }, beginAtZero: true },
   },
+};
+
+const calculateExperienceFromStartDate = (dateString) => {
+  if (!dateString) return 0;
+
+  const startDate = new Date(dateString);
+  const now = new Date();
+
+  if (isNaN(startDate)) return 0;
+
+  const totalMonths =
+    (now.getFullYear() - startDate.getFullYear()) * 12 +
+    (now.getMonth() - startDate.getMonth());
+
+  return +(totalMonths / 12).toFixed(2); // round to 2 decimal places
 };
 
 const ExperienceChart = ({ employeeData, filter = "All" }) => {
@@ -36,21 +36,19 @@ const ExperienceChart = ({ employeeData, filter = "All" }) => {
   const [selectedExperienceLevel, setSelectedExperienceLevel] = useState("");
   const [employeeList, setEmployeeList] = useState([]);
 
+  // In ExperienceChart.jsx
+
   const experienceCounts = useMemo(() => {
     let junior = 0;
     let mid = 0;
     let senior = 0;
 
     employeeData.forEach((emp) => {
-      const experience = parseFloat(emp.OverAllExperience);
-      const status = emp.BenchStatus;
+      const experience = calculateExperienceFromStartDate(emp.careerStartDate);
+      const status = (emp.status || "").toLowerCase().trim();
+      const normalizedFilter = filter.toLowerCase().trim();
 
-      if (isNaN(experience)) return;
-
-      const normalizedStatus = status?.toLowerCase() || "";
-      const normalizedFilter = filter.toLowerCase();
-
-      if (filter !== "All" && normalizedStatus !== normalizedFilter) return;
+      if (filter !== "All" && status !== normalizedFilter) return;
 
       if (experience < 3) junior++;
       else if (experience <= 6) mid++;
@@ -60,14 +58,15 @@ const ExperienceChart = ({ employeeData, filter = "All" }) => {
     return [junior, mid, senior];
   }, [employeeData, filter]);
 
-  // Filter employees based on experience level and bench status
   const getFilteredEmployees = (experienceLevel) => {
     if (!employeeData) return [];
-    const normalizedFilter = filter.toLowerCase();
+    const normalizedFilter = filter.toLowerCase().trim();
 
     return employeeData.filter((emp) => {
-      const experience = parseFloat(emp.OverAllExperience);
-      const status = emp.BenchStatus?.toLowerCase();
+      const experience = calculateExperienceFromStartDate(
+        emp.overAllExperience
+      );
+      const status = (emp.status || "").toLowerCase().trim();
       let levelMatch = false;
 
       if (experienceLevel === "Junior" && experience < 3) levelMatch = true;
