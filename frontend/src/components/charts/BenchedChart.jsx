@@ -3,33 +3,37 @@ import ChartWrapper from "./ChartWrapper";
 import EmployeeModal from "../employeeModals/EmployeeModal";
 
 const calculateBenchedEmployees = (employeeData) => {
-  const benchedEmployees = employeeData.filter(
-    (emp) => emp.BenchStatus === "Benched"
+  const BenchEmployees = employeeData.filter(
+    (emp) => emp.status?.trim().toLowerCase() === "bench"
   );
 
-  // Categories
   const inTraining = [];
   const workingOnInternalProjects = [];
   const noPlans = [];
 
-  benchedEmployees.forEach((emp) => {
-    const isInTraining = emp.EngagementPlans.some((plan) =>
-      plan.PlanName.toLowerCase().includes("training")
+  BenchEmployees.forEach((emp) => {
+    const engagementPlans = Array.isArray(emp.EngagementPlans)
+      ? emp.EngagementPlans
+      : [];
+    const allocations = Array.isArray(emp.Allocations) ? emp.Allocations : [];
+
+    const isInTraining = engagementPlans.some((plan) =>
+      plan.PlanName?.toLowerCase().includes("training")
     );
 
     if (isInTraining) {
       inTraining.push(emp);
     }
 
-    const isWorkingOnInternalProject = emp.Allocations.some(
-      (alloc) => alloc.Client.toLowerCase() === "internal"
+    const isWorkingOnInternalProject = allocations.some(
+      (alloc) => alloc.Client?.toLowerCase() === "internal"
     );
 
     if (isWorkingOnInternalProject) {
       workingOnInternalProjects.push(emp);
     }
 
-    const hasNoPlans = emp.EngagementPlans.length === 0;
+    const hasNoPlans = engagementPlans.length === 0;
     if (hasNoPlans) {
       noPlans.push(emp);
     }
