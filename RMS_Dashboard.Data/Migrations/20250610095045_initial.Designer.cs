@@ -12,7 +12,7 @@ using RMS_Dashboard.Data;
 namespace RMS_Dashboard.Data.Migrations
 {
     [DbContext(typeof(RmsDbContext))]
-    [Migration("20250603195810_initial")]
+    [Migration("20250610095045_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -94,6 +94,10 @@ namespace RMS_Dashboard.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("RelevantExpSecondary")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Remarks")
                         .IsRequired()
                         .HasColumnType("text");
 

@@ -34,6 +34,7 @@ namespace RMS_Dashboard.Data
                     var designation = worksheet.Cell(row, 5).GetValue<string>();
                     var status = worksheet.Cell(row, 6).GetValue<string>();
                     var clientName = worksheet.Cell(row, 7).GetValue<string>();
+                    var remarks = worksheet.Cell(row, 8).GetValue<string>();
                     var benchStatus = worksheet.Cell(row, 10).GetValue<string>();
                     var projectName = worksheet.Cell(row, 14).GetValue<string>();
                     var workLocation = worksheet.Cell(row, 15).GetValue<string>();
@@ -93,7 +94,8 @@ namespace RMS_Dashboard.Data
                         WorkMode = workMode,
                         Seniority = seniority,
                         ExperienceAtZapCom = expAtZapCom,
-                        BenchStartDate = benchStartDate
+                        BenchStartDate = benchStartDate,
+                        Remarks = remarks,
                         // Optionally include isAllocated, isEngaged if part of Employee entity
                     };
 

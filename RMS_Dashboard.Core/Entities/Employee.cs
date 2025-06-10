@@ -43,6 +43,9 @@ namespace RMS_Dashboard.Core.Entities
 
         public string Seniority { get; set; }   
         public string ExperienceAtZapCom { get; set; }
+
+        public string Remarks { get; set; }
+
     }
 
 }

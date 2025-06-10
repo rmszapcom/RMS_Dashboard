@@ -41,7 +41,8 @@ namespace RMS_Dashboard.Data.Migrations
                     BenchStartDate = table.Column<string>(type: "text", nullable: false),
                     ExpectedRollOffDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     Seniority = table.Column<string>(type: "text", nullable: false),
-                    ExperienceAtZapCom = table.Column<string>(type: "text", nullable: false)
+                    ExperienceAtZapCom = table.Column<string>(type: "text", nullable: false),
+                    Remarks = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

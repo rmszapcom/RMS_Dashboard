@@ -40,6 +40,7 @@ public class EmployeeService : IEmployeeService
         employee.SkillCategory = updatedData.SkillCategory ?? employee.SkillCategory;
         employee.Practice = updatedData.Practice ?? employee.Practice;
         employee.WorkMode = updatedData.WorkMode ?? employee.WorkMode;
+        employee.Remarks = updatedData.Remarks ?? employee.Remarks;
         employee.WorkLocation = updatedData.WorkLocation ?? employee.WorkLocation;
         employee.BenchStatus = updatedData.BenchStatus ?? employee.BenchStatus;
         employee.BenchStartDate = updatedData.BenchStartDate ?? employee.BenchStartDate;
