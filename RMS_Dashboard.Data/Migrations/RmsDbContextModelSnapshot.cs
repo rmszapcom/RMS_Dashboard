@@ -94,6 +94,10 @@ namespace RMS_Dashboard.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Remarks")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("ReportingManager")
                         .IsRequired()
                         .HasColumnType("text");

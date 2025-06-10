@@ -17,6 +17,8 @@
         public string? OverAllExperience { get; set; }
         public string? Practice { get; set; }
         public string? WorkMode { get; set; }
+        public string? Remarks { get; set; }
+
         public string? IsEngaged { get; set; }
         public string? IsAllocated { get; set; }
 
