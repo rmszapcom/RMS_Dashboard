@@ -1,23 +1,8 @@
 import React from "react";
-import {
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  Button,
-  Box,
-} from "@mui/material";
+import { Table, TableHead, TableRow, TableCell, TableBody, Button, Box } from "@mui/material";
 
-function EmployeeTable({
-  employeeData,
-  onEditClick,
-  onAllocateClick,
-  onReleaseClick,
-}) {
-  // Dynamically generate headers from the first employee object
+function EmployeeTable({ employeeData, onEditClick, onAllocateClick, onReleaseClick }) {
   const headers = employeeData.length > 0 ? Object.keys(employeeData[0]) : [];
-  // Add "Actions" as the last header
   headers.push("Actions");
 
   const formatArray = (arr) =>
@@ -43,14 +28,11 @@ function EmployeeTable({
                 color: "#FFFFFF",
                 fontWeight: "bold",
                 fontSize: "0.85rem",
-                borderRight:
-                  idx !== headers.length - 1 ? "1px solid #ccc" : "none",
-                // Make EmployeeName column sticky
-                position: heading === "EmployeeName" ? "sticky" : "static",
-                left: heading === "EmployeeName" ? 0 : "auto",
-                zIndex: heading === "EmployeeName" ? 10 : "auto",
-                backgroundColor:
-                  heading === "EmployeeName" ? "#1C196E" : "none",
+                borderRight: idx !== headers.length - 1 ? "1px solid #ccc" : "none",
+                position: heading === "employeeName" ? "sticky" : "static",
+                left: heading === "employeeName" ? 0 : "auto",
+                zIndex: heading === "employeeName" ? 1200 : "auto",
+                backgroundColor: heading === "employeeName" ? "#1C196E" : "inherit",
               }}
             >
               {heading}
@@ -63,42 +45,20 @@ function EmployeeTable({
         {employeeData.map((emp, index) => (
           <TableRow key={index} sx={{ "& td": { textAlign: "center" } }}>
             {headers.map((heading, idx) => {
-              // Skip the "Actions" column here as we will add it separately
               if (heading === "Actions") {
                 return (
                   <TableCell key={heading} sx={{ padding: "8px" }}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: 1,
-                      }}
-                    >
-                      <Button
-                        variant="outlined"
-                        color="primary"
-                        size="small"
-                        onClick={() => onEditClick(emp)}
-                      >
+                    <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
+                      <Button variant="outlined" color="primary" size="small" onClick={() => onEditClick(emp)}>
                         Edit
                       </Button>
                       {emp.status === "Allocated" && (
-                        <Button
-                          variant="outlined"
-                          color="error"
-                          size="small"
-                          onClick={() => onReleaseClick(emp)}
-                        >
+                        <Button variant="outlined" color="error" size="small" onClick={() => onReleaseClick(emp)}>
                           Release
                         </Button>
                       )}
                       {(emp.status === "Bench" || emp.status === "Shadow") && (
-                        <Button
-                          variant="outlined"
-                          color="success"
-                          size="small"
-                          onClick={() => onAllocateClick(emp)}
-                        >
+                        <Button variant="outlined" color="success" size="small" onClick={() => onAllocateClick(emp)}>
                           Allocate
                         </Button>
                       )}
@@ -112,20 +72,14 @@ function EmployeeTable({
                   key={heading}
                   sx={{
                     fontSize: "0.85rem",
-                    borderRight:
-                      idx !== headers.length - 1 ? "1px solid #ccc" : "none",
-                    // Make EmployeeName column sticky
-                    position: heading === "EmployeeName" ? "sticky" : "static",
-                    left: heading === "EmployeeName" ? 0 : "auto",
-                    zIndex: heading === "EmployeeName" ? 10 : "auto",
-                    backgroundColor:
-                      heading === "EmployeeName" ? "white" : "none",
+                    borderRight: idx !== headers.length - 1 ? "1px solid #ccc" : "none",
+                    position: heading === "employeeName" ? "sticky" : "static",
+                    left: heading === "employeeName" ? 0 : "auto",
+                    zIndex: heading === "employeeName" ? 1000 : "auto",
+                    backgroundColor: heading === "employeeName" ? "#fff" : "inherit",
                   }}
                 >
-                  {heading === "BenchExitDetails" ||
-                  heading === "Skills" ||
-                  heading === "EngagementPlans" ||
-                  heading === "Allocations"
+                  {heading === "BenchExitDetails" || heading === "Skills" || heading === "EngagementPlans" || heading === "Allocations"
                     ? formatArray(emp[heading])
                     : emp[heading]}
                 </TableCell>
