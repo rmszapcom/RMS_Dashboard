@@ -37,7 +37,6 @@ function EmployeeModal({ open, handleClose, status, employeeData }) {
   const [allocationEmployee, setAllocationEmployee] = useState(null);
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
 
-  // Dummy data
   const dummyProjects = ["Alpha", "Beta", "Gamma"];
   const dummyClients = ["Acme Corp", "Globex Inc", "Initech"];
 
@@ -48,12 +47,12 @@ function EmployeeModal({ open, handleClose, status, employeeData }) {
 
   const handleReleaseClick = (employee) => {
     setSelectedEmployee(employee);
-    setConfirmDialogOpen(true); // Open the confirmation dialog
+    setConfirmDialogOpen(true);
   };
 
   const handleConfirmRelease = () => {
     console.log(
-      `Released ${selectedEmployee.EmployeeName} from ${selectedEmployee.ProjectName}`
+      `Released ${selectedEmployee.employeeName} from ${selectedEmployee.projectName}`
     );
     setConfirmDialogOpen(false);
   };
@@ -77,34 +76,23 @@ function EmployeeModal({ open, handleClose, status, employeeData }) {
   };
 
   const filteredEmployeeData = employeeData.filter((emp) =>
-    (emp.name?.toLowerCase() ?? "").includes(searchTerm.toLowerCase())
+    (emp.employeeName?.toLowerCase() ?? "").includes(searchTerm.toLowerCase())
   );
 
   return (
     <>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
-          <Box
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-            mb={2}
-          >
+          <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
             <Typography sx={{ color: "#1C196E", fontWeight: 500 }}>
               {status} Employees
             </Typography>
             <CloseIcon
               onClick={handleClose}
-              sx={{
-                cursor: "pointer",
-                color: "#1C196E",
-                fontSize: 28,
-                "&:hover": { color: "#f44336" },
-              }}
+              sx={{ cursor: "pointer", color: "#1C196E", fontSize: 28, "&:hover": { color: "#f44336" } }}
             />
           </Box>
 
-          {/* Search Bar */}
           <Box sx={{ width: "100%", mb: 2 }}>
             <TextField
               fullWidth
@@ -112,7 +100,6 @@ function EmployeeModal({ open, handleClose, status, employeeData }) {
               placeholder="Search by Name"
               value={searchTerm}
               onChange={handleSearchChange}
-              sx={{ height: "20%" }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -135,12 +122,7 @@ function EmployeeModal({ open, handleClose, status, employeeData }) {
         </Box>
       </Modal>
 
-      <EditEmployeeModal
-        open={editOpen}
-        handleClose={() => setEditOpen(false)}
-        employee={selectedEmployee}
-        handleSave={handleEditSave}
-      />
+      <EditEmployeeModal open={editOpen} handleClose={() => setEditOpen(false)} employee={selectedEmployee} handleSave={handleEditSave} />
 
       <ProjectAllocationModal
         open={allocationOpen}
@@ -156,7 +138,7 @@ function EmployeeModal({ open, handleClose, status, employeeData }) {
         onClose={() => setConfirmDialogOpen(false)}
         onConfirm={handleConfirmRelease}
         title="Release Confirmation"
-        description={`Are you sure you want to release ${selectedEmployee?.EmployeeName}?`}
+        description={`Are you sure you want to release ${selectedEmployee?.employeeName}?`}
         confirmText="Release"
         confirmColor="error"
       />

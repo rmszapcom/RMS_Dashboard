@@ -3,38 +3,20 @@ import ChartWrapper from "./ChartWrapper";
 import EmployeeModal from "../employeeModals/EmployeeModal";
 
 const calculateBenchedEmployees = (employeeData) => {
-  const BenchEmployees = employeeData.filter(
-    (emp) => emp.status?.trim().toLowerCase() === "bench"
-  );
-
   const inTraining = [];
   const workingOnInternalProjects = [];
   const noPlans = [];
 
-  BenchEmployees.forEach((emp) => {
-    const engagementPlans = Array.isArray(emp.EngagementPlans)
-      ? emp.EngagementPlans
-      : [];
-    const allocations = Array.isArray(emp.Allocations) ? emp.Allocations : [];
+  employeeData.forEach((emp) => {
+    const remarks = emp.remarks?.trim().toLowerCase() || "";
+    const status = emp.status?.trim().toLowerCase() || "";
 
-    const isInTraining = engagementPlans.some((plan) =>
-      plan.PlanName?.toLowerCase().includes("training")
-    );
-
-    if (isInTraining) {
-      inTraining.push(emp);
-    }
-
-    const isWorkingOnInternalProject = allocations.some(
-      (alloc) => alloc.Client?.toLowerCase() === "internal"
-    );
-
-    if (isWorkingOnInternalProject) {
+    if (remarks === "internal") {
+      // Include all Internal cases, regardless of status
       workingOnInternalProjects.push(emp);
-    }
-
-    const hasNoPlans = engagementPlans.length === 0;
-    if (hasNoPlans) {
+    } else if (remarks === "training" && status === "bench") {
+      inTraining.push(emp);
+    } else if (remarks === "no plan" && status === "bench") {
       noPlans.push(emp);
     }
   });
@@ -45,6 +27,8 @@ const calculateBenchedEmployees = (employeeData) => {
     noPlans,
   };
 };
+
+
 
 const BenchedChart = ({ employeeData }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -57,7 +41,7 @@ const BenchedChart = ({ employeeData }) => {
   );
 
   const data = {
-    labels: ["Training", "Internal Project", "No Plan"],
+    labels: ["Training", "Internal", "No Plan"],
     datasets: [
       {
         label: "Benched Employees",
@@ -106,7 +90,7 @@ const BenchedChart = ({ employeeData }) => {
           case "Training":
             setEmployeeList(benchedEmployeeCategories.inTraining);
             break;
-          case "Internal Project":
+          case "Internal":
             setEmployeeList(
               benchedEmployeeCategories.workingOnInternalProjects
             );

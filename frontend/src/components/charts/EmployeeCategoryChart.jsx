@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useActionState } from "react";
 import ChartWrapper from "./ChartWrapper";
 import EmployeeModal from "../employeeModals/EmployeeModal";
 
@@ -15,6 +15,7 @@ const skillLabels = [
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false, 
   plugins: {
     legend: {
       position: "bottom",
@@ -35,13 +36,15 @@ const EmployeeCategoryChart = ({ employeeData, filter = "All" }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [employeeList, setEmployeeList] = useState([]);
+ const listOfCategory=[];
 
   const categoryCounts = useMemo(() => {
     const counts = new Array(skillLabels.length).fill(0);
 
     employeeData.forEach((emp) => {
-      const category = emp.SkillCategory?.trim();
-      const status = emp.BenchStatus?.toLowerCase();
+      const category = emp.skillCategory?.trim();
+      const status = emp.status?.toLowerCase();
+      listOfCategory.push(category.toLowerCase());
       const normalizedFilter = filter.toLowerCase();
 
       if (filter !== "All" && status !== normalizedFilter) return;
@@ -50,20 +53,25 @@ const EmployeeCategoryChart = ({ employeeData, filter = "All" }) => {
         (label) => label.toLowerCase() === category?.toLowerCase()
       );
       if (index !== -1) counts[index]++;
+   
     });
+    
 
     return counts;
   }, [employeeData, filter]);
+  // console.log([...new Set(listOfCategory)]);
 
   // Filter employees based on selected category and status filter
   const getFilteredEmployees = (category) => {
     if (!employeeData) return [];
     const normalizedCategory = category.toLowerCase();
+    // console.log('hi',normalizedCategory)
     const normalizedFilter = filter.toLowerCase();
 
     return employeeData.filter((emp) => {
-      const category = emp.SkillCategory?.trim().toLowerCase();
-      const status = emp.BenchStatus?.toLowerCase();
+      const category = emp.skillCategory?.trim().toLowerCase();
+      
+      const status = emp.status?.toLowerCase();
       return (
         category === normalizedCategory &&
         (filter === "All" || status === normalizedFilter)

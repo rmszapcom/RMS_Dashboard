@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using RMS_Dashboard.Core;
 using RMS_Dashboard.Data;
@@ -18,10 +17,23 @@ namespace RMS_Dashboard
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
             builder.Services.AddDbContext<RmsDbContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddLogging();
             builder.Services.AddScoped<ExcelDataImporter>();
+
+            // Add CORS policy for React development
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("ReactDevCorsPolicy", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000") // React dev server
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
 
             var app = builder.Build();
 
@@ -44,6 +56,9 @@ namespace RMS_Dashboard
             }
 
             app.UseHttpsRedirection();
+
+            // Use the CORS policy
+            app.UseCors("ReactDevCorsPolicy");
 
             app.UseAuthorization();
 

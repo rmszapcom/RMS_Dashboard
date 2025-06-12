@@ -2,74 +2,65 @@ import React, { useState, useMemo } from "react";
 import ChartWrapper from "./ChartWrapper";
 import EmployeeModal from "../employeeModals/EmployeeModal";
 
-const BenchAgingChart = ({ employeeData }) => {
+const BenchAgingChart = ({ employeeData = [] }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedAgingGroup, setSelectedAgingGroup] = useState("");
   const [employeeList, setEmployeeList] = useState([]);
 
-  const { labels, datasetData } = useMemo(() => {
-    const now = new Date();
+  const now = useMemo(() => new Date(), []);
 
-    let bucket1 = 0; // ≤ 15 Days
-    let bucket2 = 0; // 15 - 45 Days
-    let bucket3 = 0; // > 45 Days
+  const isValidDate = (date) => {
+    const parsed = new Date(date);
+    return parsed instanceof Date && !isNaN(parsed);
+  };
+
+  const { labels, datasetData } = useMemo(() => {
+    let bucket1 = 0;
+    let bucket2 = 0;
+    let bucket3 = 0;
 
     employeeData.forEach((emp) => {
-      const benchDateStr = emp.BenchStartDate;
-      if (!benchDateStr) return; // skip if null, undefined, or empty
+      const benchDateStr = emp.benchStartDate || emp.BenchStartDate;
+      if (!benchDateStr || !isValidDate(benchDateStr)) return;
 
       const benchStart = new Date(benchDateStr);
       const diffDays = Math.floor((now - benchStart) / (1000 * 60 * 60 * 24));
 
-      if (diffDays <= 15) {
-        bucket1++;
-      } else if (diffDays <= 45) {
-        bucket2++;
-      } else {
-        bucket3++;
-      }
+      if (diffDays <= 15) bucket1++;
+      else if (diffDays <= 45) bucket2++;
+      else bucket3++;
     });
 
     return {
       labels: ["≤ 15 Days", "15 - 45 Days", "> 45 Days"],
       datasetData: [bucket1, bucket2, bucket3],
     };
-  }, [employeeData]);
+  }, [employeeData, now]);
+  
 
-  // Filter employees based on selected aging group
-  const getFilteredEmployees = (agingGroup) => {
-    if (!employeeData) return [];
-    const now = new Date();
-
+  const getFilteredEmployees = (group) => {
     return employeeData.filter((emp) => {
-      const benchDateStr = emp.BenchStartDate;
-      if (!benchDateStr) return false;
+      const dateStr = emp.benchStartDate || emp.BenchStartDate;
+      if (!dateStr || !isValidDate(dateStr)) return false;
 
-      const benchStart = new Date(benchDateStr);
-      const diffDays = Math.floor((now - benchStart) / (1000 * 60 * 60 * 24));
+      const diffDays = Math.floor((now - new Date(dateStr)) / (1000 * 60 * 60 * 24));
 
-      switch (agingGroup) {
-        case "≤ 15 Days":
-          return diffDays <= 15;
-        case "15 - 45 Days":
-          return diffDays > 15 && diffDays <= 45;
-        case "> 45 Days":
-          return diffDays > 45;
-        default:
-          return false;
+      switch (group) {
+        case "≤ 15 Days": return diffDays <= 15;
+        case "15 - 45 Days": return diffDays > 15 && diffDays <= 45;
+        case "> 45 Days": return diffDays > 45;
+        default: return false;
       }
     });
   };
 
-  // Chart data and options
   const data = {
     labels,
     datasets: [
       {
-        label: "No. of Employees",
+        label: "Number of Employees",
         data: datasetData,
         backgroundColor: ["#8884d8", "#82ca9d", "#ff7f50"],
-        borderWidth: 1,
       },
     ],
   };
@@ -78,12 +69,8 @@ const BenchAgingChart = ({ employeeData }) => {
     indexAxis: "y",
     responsive: true,
     plugins: {
-      legend: {
-        display: false,
-      },
-      tooltip: {
-        enabled: true,
-      },
+      legend: { display: false },
+      tooltip: { enabled: true },
     },
     scales: {
       x: {
@@ -103,18 +90,14 @@ const BenchAgingChart = ({ employeeData }) => {
     onClick: (event, elements) => {
       if (elements.length > 0) {
         const index = elements[0].index;
-        const agingGroup = labels[index];
-        setSelectedAgingGroup(agingGroup);
-        setEmployeeList(getFilteredEmployees(agingGroup));
+        const group = labels[index];
+        setSelectedAgingGroup(group);
+        setEmployeeList(getFilteredEmployees(group));
         setModalOpen(true);
       }
     },
     onHover: (event, chartElement) => {
-      if (chartElement.length > 0) {
-        event.native.target.style.cursor = "pointer";
-      } else {
-        event.native.target.style.cursor = "default";
-      }
+      event.native.target.style.cursor = chartElement.length > 0 ? "pointer" : "default";
     },
   };
 
