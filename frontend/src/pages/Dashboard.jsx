@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("https://localhost:7066/api/Employees")
+      .get("http://localhost:5282/api/Employees")
       .then((result) => {
         setEmployeeData(result.data);
         setLoading(false);
