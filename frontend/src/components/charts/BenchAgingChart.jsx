@@ -20,10 +20,15 @@ const BenchAgingChart = ({ employeeData = [] }) => {
     let bucket3 = 0;
 
     employeeData.forEach((emp) => {
-      const benchDateStr = emp.benchStartDate || emp.BenchStartDate;
+      const status = (emp.status || "").toLowerCase().trim();
+      if (status !== "bench") return; // Only process bench employees
+
+      const benchDateStr = emp.benchStartDate;
       if (!benchDateStr || !isValidDate(benchDateStr)) return;
 
       const benchStart = new Date(benchDateStr);
+      if (isNaN(benchStart)) return;
+
       const diffDays = Math.floor((now - benchStart) / (1000 * 60 * 60 * 24));
 
       if (diffDays <= 15) bucket1++;
@@ -36,20 +41,32 @@ const BenchAgingChart = ({ employeeData = [] }) => {
       datasetData: [bucket1, bucket2, bucket3],
     };
   }, [employeeData, now]);
-  
 
-  const getFilteredEmployees = (group) => {
+  const getFilteredEmployees = (agingGroup) => {
+    if (!employeeData) return [];
+    const now = new Date();
+
     return employeeData.filter((emp) => {
-      const dateStr = emp.benchStartDate || emp.BenchStartDate;
-      if (!dateStr || !isValidDate(dateStr)) return false;
+      const status = (emp.status || "").toLowerCase().trim();
+      if (status !== "bench") return false;
 
-      const diffDays = Math.floor((now - new Date(dateStr)) / (1000 * 60 * 60 * 24));
+      const benchDateStr = emp.benchStartDate;
+      if (!benchDateStr || !isValidDate(benchDateStr)) return false;
 
-      switch (group) {
-        case "≤ 15 Days": return diffDays <= 15;
-        case "15 - 45 Days": return diffDays > 15 && diffDays <= 45;
-        case "> 45 Days": return diffDays > 45;
-        default: return false;
+      const benchStart = new Date(benchDateStr);
+      if (isNaN(benchStart)) return false;
+
+      const diffDays = Math.floor((now - benchStart) / (1000 * 60 * 60 * 24));
+
+      switch (agingGroup) {
+        case "≤ 15 Days":
+          return diffDays <= 15;
+        case "15 - 45 Days":
+          return diffDays > 15 && diffDays <= 45;
+        case "> 45 Days":
+          return diffDays > 45;
+        default:
+          return false;
       }
     });
   };
@@ -97,7 +114,8 @@ const BenchAgingChart = ({ employeeData = [] }) => {
       }
     },
     onHover: (event, chartElement) => {
-      event.native.target.style.cursor = chartElement.length > 0 ? "pointer" : "default";
+      event.native.target.style.cursor =
+        chartElement.length > 0 ? "pointer" : "default";
     },
   };
 
